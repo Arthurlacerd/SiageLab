@@ -1,21 +1,70 @@
-{
-  "familias": [
-    "glow_expert.json",
-    "cauterizacao_lisos.json",
-    "nutri_rose.json",
-    "acelera_crescimento.json",
-    "cica_therapy.json",
-    "liso_intenso.json",
-    "reconstroi_os_fios.json",
-    "hair_plastia.json",
-    "regeneracao_pos_quimica.json",
-    "nutri_oleos_poderosos.json",
-    "revela_os_cachos.json",
-    "cauterizacao_dos_fios.json",
-    "hidratacao_micelar.json",
-    "loiro_expert.json",
-    "combate_o_frizz.json",
-    "pro_cronology.json",
-    "men.json"
-  ]
+const fs = require("fs");
+const path = require("path");
+
+function safeParseJson(filePath) {
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    if (!raw.trim()) return null;
+    return JSON.parse(raw);
+  } catch (err) {
+    console.warn(`Não foi possível carregar ${filePath}:`, err.message);
+    return null;
+  }
 }
+
+/**
+ * Normaliza qualquer um dos formatos que aparecem nos JSONs:
+ * 1) { id: "slug", ...dados }
+ * 2) { "slug": { ...dados } }
+ */
+function normalizarFamilia(parsed, fileName) {
+  if (!parsed || typeof parsed !== "object") return null;
+
+  const fromEnvelope = Object.keys(parsed).length === 1;
+  const [envelopeKey, envelopeValue] = Object.entries(parsed)[0] || [];
+
+  const conteudo =
+    fromEnvelope && envelopeValue && typeof envelopeValue === "object"
+      ? envelopeValue
+      : parsed;
+
+  const id =
+    conteudo.id ||
+    (fromEnvelope && envelopeKey) ||
+    path.basename(fileName, ".json");
+
+  if (!id) return null;
+
+  return {
+    id,
+    ...conteudo,
+    atributos: conteudo.atributos || {},
+  };
+}
+
+function loadFamilias() {
+  const dir = __dirname;
+  const entries = fs
+    .readdirSync(dir)
+    .filter((file) => file.endsWith(".json"));
+
+  const familias = {};
+
+  entries.forEach((file) => {
+    const parsed = safeParseJson(path.join(dir, file));
+    const normalizado = normalizarFamilia(parsed, file);
+    if (!normalizado) return;
+
+    familias[normalizado.id] = normalizado;
+  });
+
+  return familias;
+}
+
+const familias = loadFamilias();
+const familiasLista = Object.entries(familias).map(([id, data]) => ({
+  id,
+  ...data,
+}));
+
+module.exports = { familias, familiasLista };
