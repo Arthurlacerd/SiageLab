@@ -5,6 +5,10 @@ const statusDiag = document.querySelector("#statusDiag");
 const familiasCatalogo = document.querySelector("#familiasCatalogo");
 const linhaGrid = document.querySelector("#linhaGrid");
 
+const consultoraFamiliaSelect = document.querySelector("#consultoraFamilia");
+const consultoraStatus = document.querySelector("#consultoraStatus");
+const consultoraKit = document.querySelector("#kitSugestoes");
+
 function formatarAtributos(atributos) {
   if (!atributos) return "";
   if (Array.isArray(atributos)) return atributos.join(" · ");
@@ -113,7 +117,7 @@ export function renderLinhaSelector(lista = []) {
   if (!linhaGrid) return;
 
   if (!lista.length) {
-    linhaGrid.innerHTML = "<p class=\"muted\">Não há linhas para escolher.</p>";
+    linhaGrid.innerHTML = '<p class="muted">Não há linhas para escolher.</p>';
     return;
   }
 
@@ -128,6 +132,104 @@ export function renderLinhaSelector(lista = []) {
     `
     )
     .join("");
+}
+
+export function renderConsultoraSelect(lista = []) {
+  if (!consultoraFamiliaSelect) return;
+
+  consultoraFamiliaSelect.innerHTML = "";
+
+  if (!lista.length) {
+    consultoraFamiliaSelect.innerHTML = '<option value="">Sem linhas disponíveis</option>';
+    return;
+  }
+
+  const options = [
+    '<option value="">Selecione uma família</option>',
+    ...lista.map(
+      (familia) =>
+        `<option value="${familia.id}">${familia.nome || familia.id} — ${
+          familia.classificacao || "Linha"
+        }</option>`
+    ),
+  ];
+
+  consultoraFamiliaSelect.innerHTML = options.join("");
+}
+
+export function renderConsultoraStatus(message, tone = "info") {
+  if (!consultoraStatus) return;
+  consultoraStatus.textContent = message;
+  consultoraStatus.dataset.tone = tone;
+}
+
+export function renderConsultoraKit({
+  familia,
+  perfil,
+  essenciais = [],
+  complementares = [],
+  recomendacoes = [],
+  matchTexto,
+}) {
+  if (!consultoraKit) return;
+
+  if (!familia) {
+    consultoraKit.innerHTML = '<p class="muted">Selecione uma família para montar o kit.</p>';
+    return;
+  }
+
+  const pillPerfil = [perfil?.tipoCabelo, perfil?.condicao, perfil?.objetivo]
+    .filter(Boolean)
+    .map((txt) => `<span class="pill-tag">${txt}</span>`)
+    .join(" ");
+
+  const renderItem = (item) => `
+    <article class="produto-card" role="listitem">
+      <header>
+        <p class="pill-tag">${item.categoria}</p>
+        <h4>${item.nome}</h4>
+      </header>
+      <p class="muted">${item.descricao || ""}</p>
+      <ul class="produto-beneficios">
+        ${(item.beneficios || []).map((b) => `<li>${b}</li>`).join("")}
+      </ul>
+      <p class="modo-uso">${item.modo_de_uso || item.uso_ideal || ""}</p>
+    </article>
+  `;
+
+  const listaEssenciais = essenciais.length
+    ? `<div class="kit-bloco"><h4>Kit Essencial</h4><div class="kit-grid" role="list">${essenciais
+        .map(renderItem)
+        .join("")}</div></div>`
+    : "";
+
+  const listaComplementar = complementares.length
+    ? `<div class="kit-bloco"><h4>Refino & Finalização</h4><div class="kit-grid" role="list">${complementares
+        .map(renderItem)
+        .join("")}</div></div>`
+    : "";
+
+  const listaRecs = recomendacoes.length
+    ? `<div class="kit-recs"><h4>Observações de consultoria</h4><ul>${recomendacoes
+        .map((rec) => `<li>${rec}</li>`).join("")}</ul></div>`
+    : "";
+
+  consultoraKit.innerHTML = `
+    <div class="kit-meta">
+      <div>
+        ${pillPerfil}
+        <p class="pill-tag soft">${familia.classificacao || "Linha"}</p>
+      </div>
+      <div>
+        <h3>${familia.nome}</h3>
+        <p class="muted">${familia.publico_alvo || ""}</p>
+        ${matchTexto ? `<p class="familia-score">${matchTexto}</p>` : ""}
+      </div>
+    </div>
+    ${listaEssenciais}
+    ${listaComplementar}
+    ${listaRecs}
+  `;
 }
 
 export function renderFamiliaDetalhe(target, familia) {
