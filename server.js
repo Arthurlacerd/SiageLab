@@ -1,86 +1,138 @@
-// Importa os módulos necessários
+// server.js
 const express = require("express");
-const bodyParser = require("body-parser");
 const path = require("path");
+const { familias, familiasLista } = require("./data"); // <– IMPORTANTE
 
-// Inicializa o app
+// Pesos da IA de recomendação
+
+const PESO_TIPO = {
+  liso:        { brilho: 0.3, controle: 0.4, antifrizz: 0.3 },
+  ondulado:    { nutricao: 0.3, antifrizz: 0.4, maciez: 0.2 },
+  cacheado:    { nutricao: 0.4, maciez: 0.4, antifrizz: 0.3 },
+  crespo:      { nutricao: 0.5, maciez: 0.4, resistencia: 0.3 },
+};
+
+const PESO_CONDICAO = {
+  saudavel:   { brilho: 0.3, maciez: 0.3 },
+  ressecado:  { nutricao: 0.6, maciez: 0.5 },
+  danificado: { reconstrucao: 0.7, resistencia: 0.6 },
+  oleoso:     { brilho: 0.4, controle: 0.5 },
+};
+
+const PESO_OBJETIVO = {
+  brilho:      { brilho: 0.8, nutricao: 0.4 },
+  "força":     { resistencia: 0.8, reconstrucao: 0.6 },
+  "hidratação":{ maciez: 0.8, nutricao: 0.3 },
+  "crescimento": { resistencia: 0.5, nutricao: 0.4 },
+  "equilíbrio":  { brilho: 0.3, nutricao: 0.3, maciez: 0.3 },
+};
+
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Configura o body-parser
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// middleware pra ler JSON do body
+app.use(express.json());
 
-// Define a pasta "public" como estática (para HTML, CSS, JS)
+// arquivos estáticos (css, js, imagens)
 app.use(express.static(path.join(__dirname, "public")));
 
-// Endpoint principal
+// ====== ROTAS DE PÁGINA (views) ======
+
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
-// === Diagnóstico Capilar ===
-app.post("/api/diagnostico", (req, res) => {
-  const { nome, tipoCabelo, condicao, objetivo } = req.body;
-
-  const respostas = {
-    brilho: "Use máscaras com óleos nutritivos e finalize com protetor térmico da linha Siàge Brilho Extremo.",
-    força: "Invista na linha Siàge Reconstrói os Fios, rica em aminoácidos e queratina.",
-    hidratação: "Aposte na linha Siàge Hidratação Micelar para repor a água e devolver a maciez.",
-    crescimento: "Use tônicos capilares e massageie o couro cabeludo 3x por semana.",
-    equilíbrio: "Faça cronograma alternando limpeza profunda e hidratação leve.",
-  };
-
-  const recomendacao =
-    respostas[objetivo] ||
-    "Mantenha uma rotina equilibrada com hidratação, nutrição e reconstrução.";
-
-  const mensagem = `
-    <strong>Olá, ${nome}!</strong><br>
-    Seu cabelo <em>${tipoCabelo}</em> está <em>${condicao}</em> e o seu objetivo é <em>${objetivo}</em>.<br><br>
-    <strong>Recomendação:</strong> ${recomendacao}<br><br>
-    💜 Nossa IA Siàge está montando um cronograma exclusivo com base nas suas informações.
-  `;
-
-  res.json({ mensagem });
+app.get("/diagnostico", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "diagnostico.html"));
 });
 
-// === Geração de Cronograma Capilar ===
-app.post("/api/cronograma", (req, res) => {
-  const { tipoCabelo, condicao, objetivo } = req.body;
+app.get("/resultado", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "resultado.html"));
+});
 
-  // Define proporções baseadas na condição
-  const base = {
-    saudavel: ["Hidratação", "Nutrição", "Hidratação", "Nutrição"],
-    ressecado: ["Hidratação", "Nutrição", "Hidratação", "Reconstrução"],
-    danificado: ["Reconstrução", "Nutrição", "Hidratação", "Reconstrução"],
-    oleoso: ["Hidratação", "Hidratação", "Nutrição", "Hidratação"],
-  };
+// ====== API SIÀGE ======
 
-  // Ajuste pelo objetivo
-  const foco = {
-    brilho: "use produtos com óleos leves e finalize com protetor térmico.",
-    força: "inclua produtos ricos em proteínas e queratina.",
-    hidratação: "mantenha máscaras hidratantes 2x por semana.",
-    crescimento: "use tônicos capilares e massageie o couro cabeludo.",
-    equilibrio: "intercale hidratação e nutrição sem exagerar em reconstruções.",
-  };
+// lista todas as famílias (resumo)
+app.get("/api/familias", (req, res) => {
+  res.json(familiasLista);
+});
 
-  const planoBase = base[condicao.toLowerCase()] || base.saudavel;
-  const focoTexto = foco[objetivo.toLowerCase()] || foco.equilibrio;
+// detalhes de uma família específica
+app.get("/api/familias/:id", (req, res) => {
+  const { id } = req.params;
+  const familia = familias[id];
 
-  const cronograma = planoBase.map((trat, i) => ({
-    dia: `Semana ${i + 1}`,
-    tratamento: trat,
-  }));
+  if (!familia) {
+    return res.status(404).json({ erro: "Família não encontrada" });
+  }
 
   res.json({
-    cronograma,
-    foco: focoTexto,
+    id,
+    ...familia,
   });
 });
 
-// Sobe o servidor
-const PORT = 3000;
+// diagnóstico simples baseado em focos (primeira versão)
+app.post("/api/diagnostico", (req, res) => {
+  const { nome, tipoCabelo, condicao, objetivo } = req.body || {};
+
+  if (!tipoCabelo || !condicao || !objetivo) {
+    return res.status(400).json({
+      erro: "Campos obrigatórios faltando (tipoCabelo, condicao, objetivo).",
+    });
+  }
+
+  function calcularScore(fam) {
+    const A = fam.atributos || {};
+    let score = 0;
+
+    // tipo de cabelo
+    const pesoTipo = PESO_TIPO[tipoCabelo] || {};
+    Object.entries(pesoTipo).forEach(([chave, peso]) => {
+      score += (A[chave] || 0) * peso;
+    });
+
+    // condição atual
+    const pesoCond = PESO_CONDICAO[condicao] || {};
+    Object.entries(pesoCond).forEach(([chave, peso]) => {
+      score += (A[chave] || 0) * peso;
+    });
+
+    // objetivo
+    const pesoObj = PESO_OBJETIVO[objetivo] || {};
+    Object.entries(pesoObj).forEach(([chave, peso]) => {
+      score += (A[chave] || 0) * peso;
+    });
+
+    return score;
+  }
+
+  const recomendadas = familiasLista
+    .map((fam) => ({
+      id: fam.id,
+      nome: fam.nome,
+      classificacao: fam.classificacao,
+      publico_alvo: fam.publico_alvo,
+      atributos: fam.atributos,
+      score: calcularScore(fam),
+    }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+
+  const primeira = recomendadas[0];
+
+  const mensagem = primeira
+    ? `Analisando seu tipo de cabelo (${tipoCabelo}), condição (${condicao}) e objetivo (${objetivo}), a linha que mais combina com você é: ${primeira.nome}.`
+    : `Não consegui encontrar uma linha ideal com os dados enviados.`;
+
+  return res.json({
+    mensagem,
+    recomendadas,
+  });
+});
+
+// ====== INICIAR SERVIDOR ======
+
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+  console.log(`SiàgeLab rodando em http://localhost:${PORT}`);
 });
