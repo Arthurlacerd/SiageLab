@@ -53,7 +53,11 @@ export function renderLinhas(lista = []) {
             <h4>${f.nome}</h4>
           </header>
           <p class="familia-publico">${f.publico_alvo || "Todos os tipos"}</p>
-          ${f.score != null ? `<p class="familia-score">Match ${(f.score * 100).toFixed(0)}%</p>` : ""}
+          ${
+            f.score != null
+              ? `<p class="familia-score">Match ${(f.score * 100).toFixed(0)}%</p>`
+              : ""
+          }
         </article>`
         )
         .join("")}
@@ -92,7 +96,8 @@ export function renderFamiliasCatalogo(lista = []) {
   if (!familiasCatalogo) return;
 
   if (!lista.length) {
-    familiasCatalogo.innerHTML = '<p class="muted">Nenhuma linha encontrada.</p>';
+    familiasCatalogo.innerHTML =
+      '<p class="muted">Nenhuma linha encontrada.</p>';
     return;
   }
 
@@ -105,8 +110,12 @@ export function renderFamiliasCatalogo(lista = []) {
           <h4>${familia.nome}</h4>
         </header>
         <p class="familia-publico">${familia.publico_alvo || ""}</p>
-        <p class="familia-atributos">${formatarAtributos(familia.atributos)}</p>
-        <button class="btn btn-ghost" type="button" data-familia-id="${familia.id}">Ver detalhes</button>
+        <p class="familia-atributos">${formatarAtributos(
+          familia.atributos
+        )}</p>
+        <button class="btn btn-ghost" type="button" data-familia-id="${
+          familia.id
+        }">Ver detalhes</button>
       </article>
     `
     )
@@ -140,7 +149,8 @@ export function renderConsultoraSelect(lista = []) {
   consultoraFamiliaSelect.innerHTML = "";
 
   if (!lista.length) {
-    consultoraFamiliaSelect.innerHTML = '<option value="">Sem linhas disponíveis</option>';
+    consultoraFamiliaSelect.innerHTML =
+      '<option value="">Sem linhas disponíveis</option>';
     return;
   }
 
@@ -174,7 +184,8 @@ export function renderConsultoraKit({
   if (!consultoraKit) return;
 
   if (!familia) {
-    consultoraKit.innerHTML = '<p class="muted">Selecione uma família para montar o kit.</p>';
+    consultoraKit.innerHTML =
+      '<p class="muted">Selecione uma família para montar o kit.</p>';
     return;
   }
 
@@ -191,7 +202,9 @@ export function renderConsultoraKit({
       </header>
       <p class="muted">${item.descricao || ""}</p>
       <ul class="produto-beneficios">
-        ${(item.beneficios || []).map((b) => `<li>${b}</li>`).join("")}
+        ${(item.beneficios || [])
+          .map((b) => `<li>${b}</li>`)
+          .join("")}
       </ul>
       <p class="modo-uso">${item.modo_de_uso || item.uso_ideal || ""}</p>
     </article>
@@ -211,7 +224,8 @@ export function renderConsultoraKit({
 
   const listaRecs = recomendacoes.length
     ? `<div class="kit-recs"><h4>Observações de consultoria</h4><ul>${recomendacoes
-        .map((rec) => `<li>${rec}</li>`).join("")}</ul></div>`
+        .map((rec) => `<li>${rec}</li>`)
+        .join("")}</ul></div>`
     : "";
 
   consultoraKit.innerHTML = `

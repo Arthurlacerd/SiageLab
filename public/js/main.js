@@ -3,6 +3,7 @@ import {
   enviarDiagnostico,
   gerarCronograma,
 } from "./apiClient.js";
+import { exportCronogramaPDF, exportDiagnosticoPDF } from "./pdfExporter.js";
 import {
   renderCronograma,
   renderConsultoraKit,
@@ -28,8 +29,13 @@ const btnAvancarGaleria = document.querySelector("#btnAvancarGaleria");
 
 const consultoraForm = document.querySelector("#consultoraForm");
 const consultoraFamiliaSelect = document.querySelector("#consultoraFamilia");
+const btnExportDiag = document.querySelector("#btnExportDiag");
+const btnExportCrono = document.querySelector("#btnExportCrono");
 
 let familiasCache = [];
+let ultimoPerfil = null;
+let ultimoDiagnostico = null;
+let ultimoCronograma = null;
 
 const accentMap = {
   hidratacao_micelar: "#a6e4ff",
@@ -132,6 +138,13 @@ function montarKitConsultora(perfil, familia) {
 async function executarDiagnostico(event) {
   event.preventDefault();
   const payload = coletarPayload();
+
+  // zera cache para nova exportação
+  ultimoPerfil = payload;
+  ultimoDiagnostico = null;
+  ultimoCronograma = null;
+  toggleExport(false);
+
   showStatus("Gerando diagnóstico...", "info");
   renderMensagem("");
   renderLinhas([]);
@@ -139,12 +152,17 @@ async function executarDiagnostico(event) {
 
   try {
     const diag = await enviarDiagnostico(payload);
+    ultimoDiagnostico = diag;
+
     renderMensagem(diag.mensagem || "Pronto! Aqui está seu plano.");
     renderLinhas(diag.recomendadas || []);
     showStatus("Diagnóstico concluído!", "success");
 
     const plano = await gerarCronograma(payload);
+    ultimoCronograma = plano;
+
     renderCronograma(plano.cronograma || []);
+    toggleExport(true);
   } catch (err) {
     console.error(err);
     showStatus(
@@ -154,7 +172,14 @@ async function executarDiagnostico(event) {
     renderMensagem("");
     renderLinhas([]);
     renderCronograma([]);
+    toggleExport(false);
   }
+}
+
+function toggleExport(enable) {
+  const action = enable ? "removeAttribute" : "setAttribute";
+  btnExportDiag?.[action]("disabled", "disabled");
+  btnExportCrono?.[action]("disabled", "disabled");
 }
 
 function main() {
@@ -166,6 +191,7 @@ function main() {
   renderConsultoraStatus(
     "Selecione um perfil e uma família para começar."
   );
+  toggleExport(false);
 
   bindFamiliaCatalogo(familiasCatalogo);
   bindLinhaSelector(linhaGrid, (linhaId) => {
@@ -206,6 +232,23 @@ function main() {
 
   refreshFamilias?.addEventListener("click", carregarFamilias);
   formDiag?.addEventListener("submit", executarDiagnostico);
+
+  btnExportDiag?.addEventListener("click", () => {
+    if (!ultimoDiagnostico) return;
+    exportDiagnosticoPDF({
+      perfil: ultimoPerfil,
+      diagnostico: ultimoDiagnostico,
+    });
+  });
+
+  btnExportCrono?.addEventListener("click", () => {
+    if (!ultimoCronograma) return;
+    exportCronogramaPDF({
+      perfil: ultimoPerfil,
+      diagnostico: ultimoDiagnostico,
+      cronograma: ultimoCronograma?.cronograma,
+    });
+  });
 }
 
 main();
