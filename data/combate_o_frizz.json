@@ -1,0 +1,91 @@
+{
+  "id": "combate_o_frizz",
+  "nome": "Siàge Combate o Frizz",
+  "descricao": "Disciplina e hidratação inteligente que controla o frizz por até 72 horas, mantendo os fios alinhados, leves e com brilho sem pesar.",
+  "publico_alvo": "Todos os tipos de cabelo que sofrem com frizz, fios arrepiados e falta de alinhamento, especialmente em ambientes úmidos.",
+  "classificacao": "hidratação disciplinante e regeneradora",
+  "frequencia_segura": "uso diário",
+  "atributos": {
+    "brilho": 0.9,
+    "maciez": 0.95,
+    "reconstrucao": 0.7,
+    "nutricao": 0.85,
+    "controle": 1.0,
+    "antifrizz": 1.0,
+    "resistencia": 0.8
+  },
+  "principais_ativos": [
+    "Biotecnologia Affinité 4D — atua nas camadas mais profundas da fibra capilar, proporcionando tratamento prolongado mesmo após o enxágue.",
+    "Biopeptídeos — fortalecem e regeneram os fios danificados, reduzindo pontas duplas e quebras.",
+    "Agentes Umectantes Inteligentes — equilibram a hidratação e impedem o arrepiado causado pela umidade."
+  ],
+  "beneficios_gerais": [
+    "Controle de frizz por até 72 horas.",
+    "Fios alinhados, macios e com movimento natural.",
+    "Redução de pontas duplas e quebra.",
+    "Brilho duradouro sem deixar o cabelo pesado.",
+    "Proteção contra umidade e agressões externas."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Siàge Combate o Frizz 250ml",
+      "funcoes": ["limpeza disciplinante", "preparo para tratamento antifrizz"],
+      "beneficios": [
+        "Remove impurezas sem ressecar.",
+        "Ajuda a alinhar e suavizar os fios desde a primeira lavagem.",
+        "Mantém o cabelo limpo, leve e com frizz controlado."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie o couro cabeludo e enxágue. Repita se necessário.",
+      "uso_ideal": "uso diário"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Combate o Frizz 200ml",
+      "funcoes": ["selagem e hidratação disciplinante"],
+      "beneficios": [
+        "Desembaraça instantaneamente e reduz o frizz.",
+        "Proporciona cabelos alinhados, leves e com brilho.",
+        "Hidrata profundamente sem pesar."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique no comprimento e pontas, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "uso diário"
+    },
+    "mascara": {
+      "nome": "Máscara Capilar Siàge Combate o Frizz 250g",
+      "funcoes": ["tratamento profundo e controle de frizz"],
+      "beneficios": [
+        "Hidrata intensamente e alinha os fios.",
+        "Reduz o arrepiado e o volume excessivo.",
+        "Proporciona toque sedoso e brilho natural."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, mecha a mecha, massageie e deixe agir por 5 minutos. Enxágue. Use de 1 a 2 vezes por semana.",
+      "uso_ideal": "tratamento semanal"
+    },
+    "creme_de_pentear": {
+      "nome": "Creme de Pentear Defrizante Siàge Combate o Frizz 100ml",
+      "funcoes": ["finalização e proteção térmica"],
+      "beneficios": [
+        "Disciplina e controla o frizz por até 72h.",
+        "Protege contra o calor de secador e chapinha.",
+        "Mantém os fios macios e brilhantes o dia todo."
+      ],
+      "modo_de_uso": "Aplique nos cabelos úmidos ou secos, distribua no comprimento e pontas, modele conforme desejar. Não enxágue.",
+      "uso_ideal": "uso diário ou antes de ferramentas de calor"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Controle de frizz real mesmo em dias úmidos.",
+      "Cabelos com brilho e balanço natural, sem rigidez.",
+      "Perfume suave e duradouro, sensação de limpeza prolongada."
+    ],
+    "riscos_de_excesso": [
+      "Uso exagerado de máscara ou leave-in pode reduzir o volume natural dos fios.",
+      "Evitar combinação imediata com linhas altamente reconstrutoras (como Cica-Therapy) para não sobrecarregar a fibra."
+    ],
+    "recomendacoes_profissionais": [
+      "Ideal para quem usa ferramentas térmicas com frequência.",
+      "Pode ser intercalada com a linha Nutri Rosé para maior brilho e movimento.",
+      "Excelente base de manutenção entre tratamentos de cauterização e reconstrução."
+    ]
+  }
+}

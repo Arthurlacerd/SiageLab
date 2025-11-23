@@ -1,0 +1,92 @@
+{
+  "id": "loiro_expert",
+  "nome": "Siàge Loiro Expert",
+  "descricao": "Cuidado profissional para cabelos loiros, descoloridos ou grisalhos. Neutraliza tons amarelados, repara a fibra e mantém o brilho por até 2 meses.",
+  "publico_alvo": "Cabelos loiros, descoloridos, grisalhos ou com mechas que sofrem com oxidação e perda de brilho.",
+  "classificacao": "reconstrução leve + matização + proteção da cor",
+  "frequencia_segura": "uso de 2 a 3 vezes por semana (ou conforme necessidade de neutralização)",
+  "atributos": {
+    "brilho": 0.9,
+    "maciez": 0.9,
+    "reconstrucao": 0.85,
+    "nutricao": 0.75,
+    "controle": 0.8,
+    "antifrizz": 0.85,
+    "resistencia": 0.9
+  },
+  "principais_ativos": [
+    "Biotecnologia Affinité 4D — identifica e trata as áreas danificadas, prolongando o tratamento mesmo após o enxágue.",
+    "Proteína Inteligente de Origem Vegetal — atua nas camadas mais profundas da fibra capilar, restaurando elasticidade e força.",
+    "Aminoácidos e Pro-Vitamina B5 — fortalecem e selam as cutículas, evitando a quebra e o ressecamento causados por descoloração.",
+    "Filtro UV — protege contra a oxidação e o desbotamento do tom loiro."
+  ],
+  "beneficios_gerais": [
+    "Neutraliza o amarelado e mantém o loiro frio e luminoso.",
+    "Repara danos causados pela descoloração e química.",
+    "Prolonga a cor e o brilho por até 2 meses.",
+    "Protege contra a oxidação e os efeitos do sol.",
+    "Fortalece a fibra capilar, reduzindo quebra e ressecamento."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Desamarelador Siàge Loiro Expert 250ml",
+      "funcoes": ["limpeza e matização suave"],
+      "beneficios": [
+        "Remove resíduos e tons amarelados sem ressecar.",
+        "Prolonga o loiro frio e luminoso.",
+        "Deixa os fios leves e com brilho."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie até formar espuma e enxágue. Use 2 a 3 vezes por semana, intercalando com um shampoo hidratante.",
+      "uso_ideal": "uso intercalado"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Loiro Expert 200ml",
+      "funcoes": ["hidratação e selagem"],
+      "beneficios": [
+        "Prolonga a cor e a vitalidade do loiro por até 2 meses.",
+        "Sela as cutículas, devolvendo brilho e maciez.",
+        "Protege contra alteração de tom e ressecamento."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique no comprimento e pontas, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "uso frequente"
+    },
+    "mascara": {
+      "nome": "Máscara Capilar Matizadora Siàge Loiro Expert 250g",
+      "funcoes": ["hidratação + matização profunda"],
+      "beneficios": [
+        "Neutraliza tons amarelados e alaranjados.",
+        "Repara danos e restaura a elasticidade da fibra.",
+        "Mantém o loiro intenso e uniforme até 2 meses."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, mecha a mecha, deixe agir por 5 minutos e enxágue. Use 1 a 2 vezes por semana.",
+      "uso_ideal": "tratamento semanal"
+    },
+    "repositorio_protectplex": {
+      "nome": "Repositor Pré e Pós Química Siàge ProtectPlex Loiro Expert 100ml",
+      "funcoes": ["proteção pré-química", "reparação pós-química"],
+      "beneficios": [
+        "Reforça a estrutura interna da fibra capilar antes de processos químicos.",
+        "Trata danos e sela cutículas após descoloração.",
+        "Proporciona força, brilho e durabilidade da cor."
+      ],
+      "modo_de_uso": "Antes da química: aplique nos fios secos, deixe agir por 10 minutos e prossiga com o procedimento. Após a química: use semanalmente, deixando agir por 5 minutos antes de enxaguar.",
+      "uso_ideal": "uso pré e pós-química"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Matização suave e sem deixar os fios arroxeados.",
+      "Sensação de cabelo tratado e macio logo após o uso.",
+      "O repositor ProtectPlex é destaque por prevenir danos em loiros platinados."
+    ],
+    "riscos_de_excesso": [
+      "Uso diário do shampoo matizador pode ressecar os fios.",
+      "Recomenda-se intercalar com linhas hidratantes como Hidratação Micelar ou Cica-Therapy."
+    ],
+    "recomendacoes_profissionais": [
+      "Ideal para manutenção de loiros frios, mechas e grisalhos.",
+      "Indicado também como tratamento pós-química para reconstrução leve.",
+      "Pode ser combinado com Hair-Plastia para fios extremamente sensibilizados."
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "hidratacao_micelar",
+  "nome": "Siàge Hidratação Micelar",
+  "descricao": "Hidratação inteligente que reequilibra os fios, mantendo-os leves, soltos e com brilho por até 48 horas.",
+  "publico_alvo": "Todos os tipos de cabelo, especialmente os opacos, ressecados ou com toque áspero que precisam de hidratação sem peso.",
+  "classificacao": "hidratação leve e inteligente",
+  "frequencia_segura": "uso diário ou intercalado com linhas de nutrição ou reconstrução",
+  "atributos": {
+    "brilho": 0.95,
+    "maciez": 1.0,
+    "reconstrucao": 0.6,
+    "nutricao": 0.8,
+    "controle": 0.85,
+    "antifrizz": 0.85,
+    "resistencia": 0.75
+  },
+  "principais_ativos": [
+    "Ativos Biomiméticos — restauram a hidratação natural, imitando os mecanismos do próprio cabelo.",
+    "Algas Marinhas — fonte de minerais e antioxidantes que revitalizam e protegem os fios.",
+    "Biotecnologia Affinité 4D — atinge as camadas mais profundas da fibra capilar, mantendo o tratamento ativo mesmo após o enxágue."
+  ],
+  "beneficios_gerais": [
+    "Cabelos hidratados e leves por até 48h.",
+    "Brilho saudável e movimento natural.",
+    "Toque sedoso e maciez imediata.",
+    "Proteção contra agressões externas e poluição.",
+    "Hidratação que não pesa nem oleosa o couro cabeludo."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Siàge Hidratação Micelar 250ml",
+      "funcoes": ["limpeza inteligente", "hidratação e leveza"],
+      "beneficios": [
+        "Limpa delicadamente o couro cabeludo e os fios.",
+        "Deixa o cabelo solto, macio e com brilho natural."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie até formar espuma e enxágue. Repita se necessário.",
+      "uso_ideal": "uso diário"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Hidratação Micelar 200ml",
+      "funcoes": ["selagem e desembaraço", "hidratação leve"],
+      "beneficios": [
+        "Sela as cutículas e facilita o desembaraço.",
+        "Mantém a hidratação dos fios sem deixá-los pesados."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique no comprimento e pontas, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "uso diário"
+    },
+    "mascara": {
+      "nome": "Máscara Capilar Siàge Hidratação Micelar 250g",
+      "funcoes": ["hidratação profunda", "maciez prolongada"],
+      "beneficios": [
+        "Proporciona hidratação intensa e duradoura.",
+        "Cabelos mais soltos, macios e com brilho.",
+        "Resultados perceptíveis desde a primeira aplicação."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, mecha a mecha, deixe agir por 5 minutos e enxágue. Use de 1 a 2 vezes por semana.",
+      "uso_ideal": "tratamento semanal"
+    },
+    "leave_in": {
+      "nome": "Leave-In Siàge Hidratação Micelar 100ml",
+      "funcoes": ["proteção térmica", "finalização hidratante"],
+      "beneficios": [
+        "Protege contra agressões térmicas e ambientais.",
+        "Mantém o cabelo hidratado e brilhante durante o dia todo.",
+        "Textura leve que não pesa nem oleosa os fios."
+      ],
+      "modo_de_uso": "Aplique no cabelo úmido ou seco, distribuindo no comprimento e pontas. Não enxágue.",
+      "uso_ideal": "uso diário"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Efeito leve e duradouro, ideal para cabelos finos.",
+      "Sensação de limpeza e frescor sem ressecar.",
+      "Fragrância suave e textura cremosa apreciada por todos os tipos de cabelo."
+    ],
+    "riscos_de_excesso": [
+      "Uso excessivo da máscara em cabelos muito finos pode reduzir o volume.",
+      "Evitar sobreposição com produtos oleosos na mesma rotina para não comprometer a leveza."
+    ],
+    "recomendacoes_profissionais": [
+      "Linha ideal para manutenção entre tratamentos intensivos.",
+      "Excelente opção pós-química leve ou escova progressiva.",
+      "Pode ser combinada com Cica-Therapy para reconstrução ou Nutri Rosé para brilho extra."
+    ]
+  }
+}

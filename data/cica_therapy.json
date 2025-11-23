@@ -1,0 +1,87 @@
+{
+  "id": "cica_therapy",
+  "nome": "Siàge Cica-Therapy",
+  "descricao": "Linha cicatrizante que repara danos desde a primeira aplicação, restaurando a fibra capilar e mantendo os fios hidratados, fortes e sedosos.",
+  "publico_alvo": "Cabelos ressecados, danificados por químicas ou ferramentas de calor, e fios fragilizados que precisam de recuperação imediata.",
+  "classificacao": "reconstrução leve e cicatrização capilar",
+  "frequencia_segura": "uso de 2 a 3 vezes por semana, podendo alternar com linhas nutritivas",
+  "atributos": {
+    "brilho": 0.85,
+    "maciez": 0.9,
+    "reconstrucao": 0.85,
+    "nutricao": 0.8,
+    "controle": 0.7,
+    "antifrizz": 0.8,
+    "resistencia": 0.9
+  },
+  "principais_ativos": [
+    "Esqualano e Ômegas 3 e 6 — tecnologia que atua diretamente nas áreas ressecadas, repondo nutrientes essenciais e fortalecendo a fibra capilar.",
+    "Biotecnologia Affinité 4D — garante tratamento prolongado mesmo após o enxágue, tratando as áreas danificadas de forma contínua.",
+    "Tecnologia Cicatrizante — restaura a estrutura interna do fio, formando um filme protetor contra novas agressões."
+  ],
+  "beneficios_gerais": [
+    "Cicatriza e restaura a fibra capilar desde a primeira aplicação.",
+    "Recupera danos causados por químicas e calor.",
+    "Mantém os fios hidratados, fortes e com brilho saudável.",
+    "Proporciona toque sedoso e aparência de cabelo novo."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Siàge Cica-Therapy 250ml",
+      "funcoes": ["limpeza suave", "remoção de resíduos sem ressecar"],
+      "beneficios": [
+        "Promove limpeza gentil e prepara o cabelo para o tratamento.",
+        "Repara danos enquanto higieniza, mantendo a maciez."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie suavemente o couro cabeludo até formar espuma e enxágue. Repita se necessário.",
+      "uso_ideal": "uso de 2 a 3 vezes por semana"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Cica-Therapy 200ml",
+      "funcoes": ["hidratação e selagem", "reparo e desembaraço imediato"],
+      "beneficios": [
+        "Hidrata profundamente e sela as cutículas.",
+        "Facilita o desembaraço e melhora a textura dos fios."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique do comprimento às pontas, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "uso pós-shampoo"
+    },
+    "mascara": {
+      "nome": "Máscara Capilar Siàge Cica-Therapy 250g",
+      "funcoes": ["reparação profunda", "reposição de nutrientes e cicatrização"],
+      "beneficios": [
+        "Repara danos e repõe nutrientes essenciais.",
+        "Cabelos mais fortes, hidratados e com brilho saudável."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique do comprimento às pontas, massageie e deixe agir por 5 minutos. Enxágue. Use até 2x por semana.",
+      "uso_ideal": "tratamento intensivo semanal"
+    },
+    "leave_in": {
+      "nome": "Leave-In Concentrado Cicatrizante Siàge Cica-Therapy 100ml",
+      "funcoes": ["finalização e cicatrização contínua", "redução de pontas duplas"],
+      "beneficios": [
+        "Corrige a cutícula e reduz pontas duplas desde a primeira aplicação.",
+        "Proporciona proteção térmica e brilho imediato.",
+        "Reforça a barreira contra ressecamento e danos futuros."
+      ],
+      "modo_de_uso": "Aplique nos fios úmidos ou secos, espalhe uniformemente e não enxágue.",
+      "uso_ideal": "finalização e proteção térmica"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Efeito de cabelo tratado de salão desde a primeira aplicação.",
+      "Sensação de reconstrução sem rigidez.",
+      "Perfume leve e sofisticado."
+    ],
+    "riscos_de_excesso": [
+      "Uso diário da máscara pode deixar fios muito pesados em cabelos finos.",
+      "Combinar com linhas reconstrutoras fortes pode causar rigidez temporária."
+    ],
+    "recomendacoes_profissionais": [
+      "Ideal para pós-química e cronogramas de recuperação.",
+      "Intercalar com Nutri Rosé ou Glow Expert para equilibrar nutrição e leveza.",
+      "Excelente para uso alternado com Cauterização dos Lisos em cabelos alisados."
+    ]
+  }
+}

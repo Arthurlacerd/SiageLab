@@ -1,0 +1,98 @@
+{
+  "id": "nutri_oleos_poderosos",
+  "nome": "Siàge Nutri Óleos Poderosos",
+  "descricao": "Nutrição profunda e elasticidade restaurada desde o primeiro uso. Fios mais fortes, luminosos e com movimento natural.",
+  "publico_alvo": "Cabelos secos, rígidos, superelásticos ou com elasticidade danificada por químicas e ressecamento.",
+  "classificacao": "nutrição intensiva e reconstrução leve",
+  "frequencia_segura": "uso de 2 a 3 vezes por semana, podendo ser intercalado com linhas hidratantes ou reparadoras como Cica-Therapy e Hair-Plastia",
+  "atributos": {
+    "brilho": 1.0,
+    "maciez": 0.95,
+    "reconstrucao": 0.75,
+    "nutricao": 1.0,
+    "controle": 0.85,
+    "antifrizz": 0.9,
+    "resistencia": 0.85
+  },
+  "principais_ativos": [
+    "Complexo de Óleos Milenares — mistura de óleos nutritivos e antioxidantes que restauram profundamente a fibra capilar, recuperando elasticidade e força.",
+    "Óleo de Argan — hidrata e sela as cutículas, reduzindo pontas duplas e frizz.",
+    "Óleo de Cártamo e Macadâmia — reforçam a nutrição lipídica e aumentam o brilho dos fios."
+  ],
+  "beneficios_gerais": [
+    "Nutrição e brilho imediato desde a primeira aplicação.",
+    "Elasticidade recuperada e toque sedoso.",
+    "Fios 2x mais macios e resistentes.",
+    "Proteção térmica e antipoluição.",
+    "Controle do frizz e efeito antifios rígidos."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Siàge Nutri Óleos Poderosos 250ml",
+      "funcoes": ["limpeza nutritiva", "remoção suave de impurezas"],
+      "beneficios": [
+        "Limpa profundamente sem ressecar.",
+        "Devolve o movimento natural aos cabelos."
+      ],
+      "modo_de_uso": "Aplique nos cabelos úmidos, massageie suavemente o couro cabeludo até formar espuma e enxágue.",
+      "uso_ideal": "uso diário"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Nutri Óleos Poderosos 200ml",
+      "funcoes": ["hidratação diária", "selagem cuticular"],
+      "beneficios": [
+        "Nutre intensamente até o interior da fibra.",
+        "Recupera maciez e reduz pontas duplas."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "uso diário ou alternado com máscara"
+    },
+    "mascara": {
+      "nome": "Máscara Capilar Siàge Nutri Óleos Poderosos 250g",
+      "funcoes": ["nutrição profunda", "reparação da elasticidade"],
+      "beneficios": [
+        "Recupera a maleabilidade e a força dos fios.",
+        "Elimina o efeito ‘chiclete’ e diminui a quebra.",
+        "Deixa os fios ultra-hidratados e macios."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, mecha a mecha, deixe agir por 5 minutos e enxágue.",
+      "uso_ideal": "1 a 2 vezes por semana"
+    },
+    "oleo_bifasico": {
+      "nome": "Óleo Bifásico Capilar Siàge Nutri Óleos Poderosos 90ml",
+      "funcoes": ["finalização", "proteção térmica e brilho"],
+      "beneficios": [
+        "Proporciona luminosidade radiante e fios 2x mais macios.",
+        "Protege contra o calor e poluição, controlando o frizz."
+      ],
+      "modo_de_uso": "Aplique algumas gotas nas mãos, espalhe e distribua nos fios úmidos ou secos. Não enxágue.",
+      "uso_ideal": "diário, antes ou após escova e prancha"
+    },
+    "elixir_overnight": {
+      "nome": "Elixir Capilar Tratamento Overnight Siàge Nutri Óleos Poderosos 150ml",
+      "funcoes": ["tratamento noturno", "hidratação restauradora"],
+      "beneficios": [
+        "Nutre intensamente durante o sono, sem pesar.",
+        "Proporciona cabelos prontos, macios e perfumados ao acordar."
+      ],
+      "modo_de_uso": "Aplique no comprimento e pontas antes de dormir, não enxágue. Reaplique conforme necessidade.",
+      "uso_ideal": "2 a 3 vezes por semana, alternado com máscara"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Usuárias relatam brilho intenso e toque sedoso imediato.",
+      "Redução significativa do frizz e recuperação da elasticidade já na primeira aplicação.",
+      "Óleo bifásico é amplamente elogiado pelo acabamento sem pesar."
+    ],
+    "riscos_de_excesso": [
+      "Uso diário de máscara ou elixir pode deixar os fios pesados em cabelos finos.",
+      "Recomenda-se intercalar com linhas leves como Hair-Plastia ou Hidratação Micelar."
+    ],
+    "recomendacoes_profissionais": [
+      "Ideal para cabelos descoloridos, secos ou expostos a agressões térmicas frequentes.",
+      "Pode ser usada como etapa de nutrição no cronograma capilar.",
+      "Combine o óleo bifásico com o elixir overnight para efeito selante prolongado."
+    ]
+  }
+}

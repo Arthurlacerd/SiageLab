@@ -1,0 +1,88 @@
+{
+  "cauterizacao_lisos": {
+    "nome": "Siàge Cauterização dos Lisos",
+    "descricao": "Linha que trata danos causados por alisamentos químicos ou ferramentas de calor, entregando fios disciplinados, macios e alinhados por muito mais tempo.",
+    "publico_alvo": "Cabelos danificados por progressiva, chapinha, secador ou alisamento químico.",
+    "classificacao": "reconstrução e disciplina térmica",
+    "frequencia_segura": "uso de 2 a 3 vezes por semana, alternando com linhas nutritivas ou hidratantes leves",
+    "atributos": {
+      "brilho": 0.8,
+      "maciez": 0.9,
+      "reconstrucao": 0.95,
+      "nutricao": 0.75,
+      "controle": 0.9,
+      "antifrizz": 0.9,
+      "resistencia": 0.95
+    },
+    "principais_ativos": [
+      "Proteína Hidrolisada — repõe nutrientes essenciais, fortalece a fibra capilar e protege contra agressões externas.",
+      "Amino10-Effex — complexo de aminoácidos que fortalece, reduz quebra e combate afinamento das pontas."
+    ],
+    "beneficios_gerais": [
+      "Repara danos pós-alisamento químico e térmico.",
+      "Prolonga o efeito liso e alinhado por mais tempo.",
+      "Proporciona fios macios, disciplinados e resistentes.",
+      "Reduz pontas duplas e protege contra o calor."
+    ],
+    "produtos": {
+      "shampoo": {
+        "nome": "Shampoo Siàge Cauterização dos Lisos 250ml",
+        "funcoes": ["limpeza reconstrutora", "preparo da fibra capilar"],
+        "beneficios": [
+          "Remove impurezas sem ressecar.",
+          "Ajuda na reparação e fortalecimento desde a lavagem."
+        ],
+        "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie o couro cabeludo até formar espuma e enxágue. Repita se necessário.",
+        "uso_ideal": "2 a 3 vezes por semana"
+      },
+      "condicionador": {
+        "nome": "Condicionador Siàge Cauterização dos Lisos 200ml",
+        "funcoes": ["selagem da cutícula", "hidratação e disciplina"],
+        "beneficios": [
+          "Deixa os fios disciplinados, hidratados e alinhados.",
+          "Facilita o desembaraço e mantém o liso por mais tempo."
+        ],
+        "modo_de_uso": "Após o shampoo, aplique no comprimento e pontas, deixe agir por 1 minuto e enxágue.",
+        "uso_ideal": "uso após o shampoo da mesma linha"
+      },
+      "mascara": {
+        "nome": "Máscara Capilar Siàge Cauterização dos Lisos 250g",
+        "funcoes": ["reconstrução profunda", "reposição de massa capilar"],
+        "beneficios": [
+          "Fios mais encorpados e resistentes.",
+          "3x mais maciez e força.",
+          "Efeito de liso tratado e saudável."
+        ],
+        "modo_de_uso": "Aplique após o shampoo, massageie mecha a mecha e deixe agir por 5 minutos. Enxágue. Use até 2x por semana.",
+        "uso_ideal": "tratamento semanal ou pós-química"
+      },
+      "leave_in": {
+        "nome": "Leave-In Capilar Siàge Cauterização dos Lisos 100ml",
+        "funcoes": ["proteção térmica", "selagem e brilho"],
+        "beneficios": [
+          "Fortalece a fibra capilar e combate o afinamento das pontas.",
+          "Protege contra o calor de secadores e pranchas.",
+          "Mantém o movimento natural dos fios."
+        ],
+        "modo_de_uso": "Aplique sobre cabelos úmidos ou secos, do comprimento às pontas. Não enxágue. Reaplique quando necessário.",
+        "uso_ideal": "finalização antes da escova ou prancha"
+      }
+    },
+    "observacoes_reais": {
+      "feedbacks_positivos": [
+        "Deixa o cabelo mais alinhado e com toque sedoso.",
+        "Controla o frizz mesmo em dias úmidos.",
+        "Efeito de salão duradouro e sem rigidez."
+      ],
+      "riscos_de_excesso": [
+        "Uso diário pode enrijecer fios finos devido à alta carga proteica.",
+        "Requer intercalar com linhas hidratantes ou nutritivas."
+      ],
+      "recomendacoes_profissionais": [
+        "Ideal intercalar com Nutri Rose ou Glow Expert para evitar rigidez.",
+        "Máscara apenas 1x por semana em cabelos não danificados.",
+        "Excelente opção para manutenção pós-progressiva."
+      ]
+    }
+  }
+}

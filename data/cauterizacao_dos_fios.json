@@ -1,0 +1,90 @@
+{
+  "id": "cauterizacao_dos_fios",
+  "nome": "Siàge Cauterização dos Fios",
+  "descricao": "Repara profundamente, sela as cutículas e fortalece cabelos danificados, secos e quebradiços. Resultado de salão com brilho e maciez imediatos.",
+  "publico_alvo": "Cabelos secos, danificados, porosos ou fragilizados por químicas e uso de calor frequente.",
+  "classificacao": "reconstrução + nutrição selante",
+  "frequencia_segura": "uso de 1 a 2 vezes por semana, alternando com linhas hidratantes como Cica-Therapy ou Hair-Plastia",
+  "atributos": {
+    "brilho": 0.9,
+    "maciez": 0.95,
+    "reconstrucao": 1.0,
+    "nutricao": 0.85,
+    "controle": 0.95,
+    "antifrizz": 0.9,
+    "resistencia": 1.0
+  },
+  "principais_ativos": [
+    "Aminoácidos — reparam a estrutura interna da fibra capilar, fortalecendo os fios desde o córtex.",
+    "Colágeno — restaura a elasticidade e a resistência, combatendo a quebra e o envelhecimento capilar.",
+    "Tecnologia Affinité 4D — ativa o tratamento contínuo mesmo após o enxágue, prolongando o efeito selante."
+  ],
+  "beneficios_gerais": [
+    "Reparação profunda e duradoura.",
+    "Cabelos 3x mais macios e resistentes.",
+    "Cutículas seladas e brilho espelhado.",
+    "Efeito disciplinante imediato, com menos frizz.",
+    "Fortalecimento progressivo contra quebra e pontas duplas."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Siàge Cauterização dos Fios 250ml",
+      "funcoes": ["limpeza reparadora", "preparo para tratamento"],
+      "beneficios": [
+        "Limpa sem ressecar.",
+        "Preenche as áreas fragilizadas dos fios.",
+        "Deixa o cabelo leve e com movimento."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie suavemente até formar espuma e enxágue. Repita se necessário.",
+      "uso_ideal": "uso de 2 a 3 vezes por semana"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Cauterização dos Fios 200ml",
+      "funcoes": ["hidratação e selagem", "ação anti-nós"],
+      "beneficios": [
+        "Desembaraça facilmente e hidrata sem pesar.",
+        "Sela as cutículas, mantendo os fios alinhados e macios."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "uso alternado ou diário conforme necessidade"
+    },
+    "mascara": {
+      "nome": "Máscara Capilar Siàge Cauterização dos Fios 250g",
+      "funcoes": ["reconstrução profunda", "selagem imediata"],
+      "beneficios": [
+        "Reduz a porosidade e repara a fibra capilar.",
+        "Sela as cutículas e hidrata intensamente.",
+        "Cabelos 3x mais macios e resistentes."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, deixe agir por 5 minutos e enxágue. Utilize de 1 a 2 vezes por semana.",
+      "uso_ideal": "tratamento semanal"
+    },
+    "serum": {
+      "nome": "Sérum Capilar Siàge Hot Therapy Cauterização dos Fios 60ml",
+      "funcoes": ["finalização", "tratamento pré ou pós-lavagem"],
+      "beneficios": [
+        "Recupera danos e sela as cutículas instantaneamente.",
+        "Fortalece e devolve o brilho aos fios.",
+        "Pode ser usado como finalizador ou tratamento noturno."
+      ],
+      "modo_de_uso": "Aplique no cabelo úmido ou seco, no comprimento e pontas. Não enxágue. Para tratamento intensivo, use como pré-shampoo e deixe agir de 15 a 30 minutos.",
+      "uso_ideal": "uso de 2 a 3 vezes por semana"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Usuárias relatam brilho intenso e sensação de cabelo reconstruído desde o primeiro uso.",
+      "Efeito de ‘cauterização de salão’ em casa, sem rigidez nos fios.",
+      "O sérum é destaque por reduzir instantaneamente a aspereza e o frizz."
+    ],
+    "riscos_de_excesso": [
+      "Uso excessivo pode deixar o cabelo rígido devido ao alto teor de aminoácidos e colágeno.",
+      "Recomenda-se alternar com linhas hidratantes leves para manter o equilíbrio."
+    ],
+    "recomendacoes_profissionais": [
+      "Ideal para cabelos danificados por progressivas, tinturas e uso constante de calor.",
+      "Pode ser usada como etapa de reconstrução no cronograma capilar.",
+      "Evitar sobreposição com outras linhas reconstrutoras na mesma semana."
+    ]
+  }
+}

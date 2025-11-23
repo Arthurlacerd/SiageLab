@@ -1,0 +1,87 @@
+{
+  "nutri_rose": {
+    "nome": "Siàge Nutri Rosé",
+    "descricao": "Linha que nutre profundamente da raiz às pontas sem pesar, proporcionando fios saudáveis, macios e com brilho natural.",
+    "publico_alvo": "Cabelos com pontas ressecadas, opacos ou que necessitam de nutrição equilibrada.",
+    "classificacao": "nutrição e reparação leve",
+    "frequencia_segura": "uso diário ou alternado com linhas de reconstrução ou hidratação",
+    "atributos": {
+      "brilho": 0.9,
+      "maciez": 0.95,
+      "reconstrucao": 0.5,
+      "nutricao": 0.95,
+      "controle": 0.7,
+      "antifrizz": 0.8,
+      "resistencia": 0.7
+    },
+    "principais_ativos": [
+      "Elixir de Rosas — ativo obtido a partir da colheita de 30 mil pétalas de rosas, que promove nutrição profunda instantânea e duradoura.",
+      "Argila Vermelha — regula a oleosidade do couro cabeludo e mantém o equilíbrio natural dos fios.",
+      "Biotecnologia Affinité 4D — detecta e trata áreas danificadas do fio, garantindo tratamento prolongado mesmo após o enxágue."
+    ],
+    "beneficios_gerais": [
+      "Nutrição profunda da raiz às pontas sem pesar.",
+      "Repara pontas duplas e melhora a maleabilidade do cabelo.",
+      "Garante brilho e maciez imediatos.",
+      "Mantém os fios alinhados e com toque sedoso."
+    ],
+    "produtos": {
+      "shampoo": {
+        "nome": "Shampoo Siàge Nutri Rosé 250ml",
+        "funcoes": ["limpeza nutritiva", "ação purificante e suavizante"],
+        "beneficios": [
+          "Limpa profundamente sem ressecar os fios.",
+          "Remove impurezas e resíduos, preparando o cabelo para a nutrição."
+        ],
+        "modo_de_uso": "Aplique nos cabelos úmidos, massageie o couro cabeludo e enxágue. Repita se necessário.",
+        "uso_ideal": "uso diário"
+      },
+      "condicionador": {
+        "nome": "Condicionador Siàge Nutri Rosé 200ml",
+        "funcoes": ["selagem e desembaraço", "hidratação e nutrição leve"],
+        "beneficios": [
+          "Desembaraça instantaneamente e sela as cutículas.",
+          "Previne a formação de nós e melhora a textura dos fios."
+        ],
+        "modo_de_uso": "Aplique após o shampoo, deixe agir por 1 minuto e enxágue.",
+        "uso_ideal": "após o shampoo da mesma linha"
+      },
+      "mascara": {
+        "nome": "Máscara Capilar Siàge Nutri Rosé 250g",
+        "funcoes": ["reparação e nutrição intensa", "hidratação profunda"],
+        "beneficios": [
+          "Repara as áreas danificadas do fio e devolve vitalidade.",
+          "Proporciona fios mais fortes, sedosos e com brilho natural."
+        ],
+        "modo_de_uso": "Após o shampoo, aplique do comprimento às pontas, massageie e deixe agir por 5 minutos. Enxágue. Use até 2x por semana.",
+        "uso_ideal": "tratamento semanal"
+      },
+      "leave_in": {
+        "nome": "Leave-In Capilar Siàge Nutri Rosé 100ml",
+        "funcoes": ["proteção e selagem", "redução de pontas duplas"],
+        "beneficios": [
+          "Protege os fios e reduz em até 2x as pontas duplas.",
+          "Mantém o cabelo nutrido e com brilho natural por todo o dia."
+        ],
+        "modo_de_uso": "Aplique nos fios úmidos ou secos, do comprimento às pontas. Não enxágue.",
+        "uso_ideal": "finalização e proteção térmica leve"
+      }
+    },
+    "observacoes_reais": {
+      "feedbacks_positivos": [
+        "Deixa o cabelo leve e solto, sem pesar.",
+        "Perfume suave e sofisticado de rosas.",
+        "Brilho visível e toque extremamente macio."
+      ],
+      "riscos_de_excesso": [
+        "Em fios muito oleosos pode reduzir o volume natural.",
+        "Uso exclusivo contínuo pode causar leve acúmulo de emolientes."
+      ],
+      "recomendacoes_profissionais": [
+        "Ideal para intercalar com linhas de reconstrução como Cauterização ou Acid Complex.",
+        "Máscara até 2x por semana é suficiente para manter o equilíbrio.",
+        "Excelente opção pós-química para reposição lipídica suave."
+      ]
+    }
+  }
+}

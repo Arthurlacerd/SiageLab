@@ -1,0 +1,114 @@
+{
+  "id": "pro_cronology",
+  "nome": "Siàge Pro Cronology",
+  "descricao": "Linha inteligente de cronograma capilar acelerado que atua nas três camadas da fibra capilar, equilibrando hidratação, nutrição e reconstrução para restaurar cabelos danificados com efeito imediato e duradouro.",
+  "publico_alvo": "Cabelos com danos moderados a severos, especialmente os que passaram por químicas, coloração, descoloração ou uso frequente de calor.",
+  "classificacao": "tratamento completo — hidratação, nutrição e reconstrução capilar",
+  "frequencia_segura": "uso contínuo em cronograma capilar (hidratação 2x/semana, nutrição e reconstrução alternadas)",
+  "atributos": {
+    "brilho": 0.95,
+    "maciez": 0.95,
+    "reconstrucao": 1.0,
+    "nutricao": 0.95,
+    "controle": 0.85,
+    "antifrizz": 0.9,
+    "resistencia": 1.0
+  },
+  "principais_ativos": [
+    "Ácido Poliglutâmico — ativo biotecnológico que equilibra a umidade interna e externa dos fios, garantindo maciez e alta hidratação.",
+    "Biotecnologia Affinité 4D — atua nas camadas mais profundas do cabelo, com tratamento progressivo e prolongado mesmo após o enxágue.",
+    "Aminoácidos e proteínas vegetais — restauram a estrutura capilar, promovendo força e resistência.",
+    "Complexo de Cronograma Inteligente — combina ativos para cada fase do tratamento (hidratação, nutrição e reconstrução) em um único sistema de ação."
+  ],
+  "beneficios_gerais": [
+    "Recupera fios danificados até a 3ª camada da fibra capilar.",
+    "Reequilibra hidratação, nutrição e reconstrução de forma personalizada.",
+    "Proporciona brilho, força e resistência desde a primeira aplicação.",
+    "Mantém os fios alinhados, macios e maleáveis.",
+    "Permite cronograma capilar completo com uma única linha."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Siàge Pro Cronology 250ml",
+      "funcoes": ["limpeza suave e preparo para tratamento profundo"],
+      "beneficios": [
+        "Remove impurezas sem ressecar.",
+        "Deixa os fios prontos para absorver melhor os tratamentos.",
+        "Mantém a hidratação natural e o toque sedoso."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie o couro cabeludo e enxágue bem.",
+      "uso_ideal": "uso diário"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Pro Cronology 200ml",
+      "funcoes": ["selagem e nutrição pós-tratamento"],
+      "beneficios": [
+        "Desembaraça facilmente e sela as cutículas.",
+        "Mantém a hidratação e o brilho por mais tempo.",
+        "Proporciona toque macio e maleabilidade imediata."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique no comprimento e pontas, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "uso diário"
+    },
+    "mascara": {
+      "nome": "Máscara de Hidratação Siàge Pro Cronology 250g",
+      "funcoes": ["tratamento central do cronograma"],
+      "beneficios": [
+        "Hidrata profundamente e repara danos estruturais.",
+        "Pode ser potencializada para nutrição ou reconstrução com boosters específicos.",
+        "Deixa os fios alinhados, fortes e com brilho intenso."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique a máscara nos fios, massageie e deixe agir por 5 minutos. Enxágue bem.",
+      "uso_ideal": "2 vezes por semana"
+    },
+    "booster_nutricao": {
+      "nome": "Potencializador de Nutrição Siàge Pro Cronology 10ml",
+      "funcoes": ["nutrição intensa e restauração da camada lipídica"],
+      "beneficios": [
+        "Garante 72h de nutrição profunda.",
+        "Restaura a maciez e o brilho dos fios secos.",
+        "Fortalece a fibra capilar e reduz quebra."
+      ],
+      "modo_de_uso": "Misture 3 gotas à Máscara de Hidratação para transformá-la em máscara nutritiva. Deixe agir por 3 minutos e enxágue.",
+      "uso_ideal": "etapa de nutrição no cronograma"
+    },
+    "booster_reconstrucao": {
+      "nome": "Potencializador de Reconstrução Siàge Pro Cronology 10ml",
+      "funcoes": ["reconstrução profunda e selagem da fibra"],
+      "beneficios": [
+        "Restaura a força e a resistência desde a primeira aplicação.",
+        "Repara danos nas três camadas do fio.",
+        "Proporciona fios mais fortes e resistentes à quebra."
+      ],
+      "modo_de_uso": "Misture 21 gotas à Máscara de Hidratação para transformá-la em máscara reconstrutora. Deixe agir por 3 minutos e enxágue.",
+      "uso_ideal": "etapa de reconstrução no cronograma"
+    },
+    "leave_in": {
+      "nome": "Leave-in Memorizador Siàge Pro Cronology 100ml",
+      "funcoes": ["finalização, selagem e proteção térmica"],
+      "beneficios": [
+        "Fortalece e memoriza o efeito de tratamento dos fios.",
+        "Proporciona brilho e maciez imediatos.",
+        "Protege do calor de secador e chapinha sem pesar."
+      ],
+      "modo_de_uso": "Aplique nos cabelos úmidos ou secos, do comprimento às pontas. Não enxágue. Pode ser usado diariamente.",
+      "uso_ideal": "uso diário ou finalizador"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Resultados visíveis em poucas aplicações.",
+      "Facilidade de uso — cronograma completo com uma linha só.",
+      "Cabelos mais fortes, encorpados e com brilho de salão."
+    ],
+    "riscos_de_excesso": [
+      "Uso exagerado dos boosters pode enrijecer os fios.",
+      "Recomenda-se respeitar o intervalo entre etapas para evitar sobrecarga proteica."
+    ],
+    "recomendacoes_profissionais": [
+      "Ideal como base de cronograma capilar completo.",
+      "Pode ser intercalada com Cica-Therapy ou Hair-Plastia para manutenção intensiva.",
+      "Linha base para consultoras montarem cronogramas personalizados no SiàgeLab."
+    ]
+  }
+}

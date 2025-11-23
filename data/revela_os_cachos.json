@@ -1,0 +1,111 @@
+{
+  "id": "revela_os_cachos",
+  "nome": "Siàge Revela os Cachos",
+  "descricao": "Alta definição, força e elasticidade para cachos e crespos. Repara danos, reduz o frizz e garante movimento natural.",
+  "publico_alvo": "Cabelos cacheados, crespos e em transição capilar que precisam de definição, hidratação e controle de frizz.",
+  "classificacao": "hidratação + nutrição equilibrada",
+  "frequencia_segura": "uso diário, podendo ser combinado com linhas de reconstrução leve como Hair-Plastia ou Cica-Therapy",
+  "atributos": {
+    "brilho": 0.9,
+    "maciez": 1.0,
+    "reconstrucao": 0.7,
+    "nutricao": 0.95,
+    "controle": 0.9,
+    "antifrizz": 1.0,
+    "resistencia": 0.85
+  },
+  "principais_ativos": [
+    "Manteiga de Karité — forma uma camada protetora nos fios, selando as cutículas e reduzindo o frizz.",
+    "Afinité 4D — tecnologia inteligente que identifica e trata danos capilares em 4 dimensões, mantendo o tratamento ativo mesmo após a lavagem.",
+    "Óleos Nutritivos — ajudam na definição e no controle de volume sem pesar."
+  ],
+  "beneficios_gerais": [
+    "Cachos definidos e com balanço natural.",
+    "Reduz até 3x o frizz.",
+    "Recupera a elasticidade e força dos fios danificados.",
+    "Hidrata profundamente e evita o ressecamento.",
+    "Facilita o desembaraço e modelagem dos cachos."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Siàge Revela os Cachos 250ml",
+      "funcoes": ["limpeza suave", "hidratação e definição"],
+      "beneficios": [
+        "Limpa delicadamente sem retirar a oleosidade natural.",
+        "Mantém os cachos soltos e definidos."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie suavemente e enxágue. Repita se necessário.",
+      "uso_ideal": "uso diário"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Revela os Cachos 200ml",
+      "funcoes": ["hidratação", "selagem e controle de frizz"],
+      "beneficios": [
+        "Facilita o desembaraço e deixa os fios maleáveis.",
+        "Proporciona brilho e maciez imediatos."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique no comprimento e pontas, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "uso diário"
+    },
+    "mascara": {
+      "nome": "Máscara Capilar Siàge Revela os Cachos 250g",
+      "funcoes": ["hidratação profunda", "reparação da elasticidade"],
+      "beneficios": [
+        "Hidrata profundamente e fortalece a fibra capilar.",
+        "Evita quebra e mantém a forma dos cachos.",
+        "Proporciona definição por mais tempo."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, deixe agir por 5 minutos e enxágue. Utilize de 1 a 2 vezes por semana.",
+      "uso_ideal": "tratamento semanal"
+    },
+    "creme_pentear": {
+      "nome": "Creme para Pentear Siàge Revela os Cachos 500g",
+      "funcoes": ["modelagem", "finalização e definição"],
+      "beneficios": [
+        "Garante força, elasticidade e até 3x menos frizz.",
+        "Ideal para fitagem e modelagem natural.",
+        "Mantém o movimento dos fios por mais tempo."
+      ],
+      "modo_de_uso": "Aplique nos cabelos úmidos e modele do seu jeito. Não enxágue.",
+      "uso_ideal": "uso diário ou pós-lavagem"
+    },
+    "creme_restauracao_intensa": {
+      "nome": "Creme de Pentear Restauração Intensa Siàge Revela os Cachos 270ml",
+      "funcoes": ["reparação pós-descoloração", "controle de frizz"],
+      "beneficios": [
+        "Recupera danos causados por químicas e descoloração.",
+        "Hidrata e protege sem pesar.",
+        "Reduz a quebra e as pontas duplas."
+      ],
+      "modo_de_uso": "Aplique no comprimento dos cabelos úmidos, modele e finalize. Não enxágue.",
+      "uso_ideal": "uso intercalado com creme tradicional"
+    },
+    "spray_revitalizador": {
+      "nome": "Spray Capilar Revitalizador Siàge Revela os Cachos 100ml",
+      "funcoes": ["reativador de cachos", "controle de frizz instantâneo"],
+      "beneficios": [
+        "Facilita a remodelagem dos cachos ao longo do dia.",
+        "Elimina o frizz e redefine sem pesar.",
+        "Devolve brilho e movimento instantaneamente."
+      ],
+      "modo_de_uso": "Agite antes de usar. Aplique nos fios úmidos ou secos, modele e não enxágue.",
+      "uso_ideal": "uso diário ou retoque ao longo do dia"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Alta definição sem rigidez — os cachos ficam soltos e leves.",
+      "Controle real do frizz em dias úmidos.",
+      "Linha muito elogiada por cabelos em transição, pois devolve forma e maciez."
+    ],
+    "riscos_de_excesso": [
+      "Excesso de creme de pentear pode deixar os cachos pesados.",
+      "Recomenda-se intercalar com linhas hidratantes leves em cabelos finos."
+    ],
+    "recomendacoes_profissionais": [
+      "Ideal para quem busca definição natural e movimento.",
+      "Pode ser combinada com Hair-Plastia (para reconstrução leve) e Nutri Óleos (para nutrição extra).",
+      "Evitar sobreposição com produtos reconstrutores pesados."
+    ]
+  }
+}

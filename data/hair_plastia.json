@@ -1,0 +1,98 @@
+{
+  "id": "hair_plastia",
+  "nome": "Siàge Hair-Plastia",
+  "descricao": "Linha com tecnologia de Inteligência Artificial e Bio Hialurônico que repara lesões do fio, devolve densidade e garante cabelos extremamente macios e rejuvenescidos.",
+  "publico_alvo": "Cabelos porosos, ressecados, sem brilho ou com sinais de envelhecimento capilar.",
+  "classificacao": "hidratação e reparação inteligente",
+  "frequencia_segura": "uso de 2 a 3 vezes por semana, podendo alternar com linhas nutritivas ou reconstrutoras",
+  "atributos": {
+    "brilho": 0.95,
+    "maciez": 1.0,
+    "reconstrucao": 0.7,
+    "nutricao": 0.8,
+    "controle": 0.9,
+    "antifrizz": 0.9,
+    "resistencia": 0.85
+  },
+  "principais_ativos": [
+    "Bio Hialurônico — retém até 1000x seu peso em água, promovendo hidratação tridimensional.",
+    "Tecnologia Affinité 4D — reconhece os danos e entrega tratamento contínuo mesmo após o enxágue.",
+    "Inteligência Artificial Capilar — sistema inteligente que identifica as necessidades específicas do fio e ajusta o tratamento."
+  ],
+  "beneficios_gerais": [
+    "Corrige lesões do fio e recupera a maciez desde o primeiro uso.",
+    "Reduz porosidade e devolve densidade aos cabelos.",
+    "Hidratação intensa e prolongada com efeito de plástica capilar.",
+    "Fios extremamente macios, sedosos e com brilho espelhado."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Siàge Hair-Plastia 250ml",
+      "funcoes": ["limpeza hidratante", "preparo para o tratamento"],
+      "beneficios": [
+        "Limpa sem ressecar.",
+        "Repara lesões do fio e mantém a hidratação tridimensional."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie o couro cabeludo até formar espuma e enxágue bem. Repita se necessário.",
+      "uso_ideal": "2 a 3 vezes por semana"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Hair-Plastia 200ml",
+      "funcoes": ["selagem", "maciez imediata"],
+      "beneficios": [
+        "Desembaraça instantaneamente e sela as cutículas.",
+        "Deixa os fios macios, disciplinados e hidratados."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique no comprimento e pontas, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "uso frequente ou após a máscara"
+    },
+    "mascara": {
+      "nome": "Máscara Capilar Siàge Hair-Plastia 250g",
+      "funcoes": ["reparação tridimensional", "plástica capilar"],
+      "beneficios": [
+        "Proporciona fios até 3x mais macios.",
+        "Recupera a elasticidade e reduz a porosidade.",
+        "Devolve brilho e densidade à fibra."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, massageie mecha a mecha e deixe agir por 5 minutos. Enxágue.",
+      "uso_ideal": "1 a 2 vezes por semana"
+    },
+    "booster": {
+      "nome": "Booster ProAging Siàge Hair-Plastia 100ml",
+      "funcoes": ["tratamento intensivo", "uso em conjunto com máscara ou como finalizador"],
+      "beneficios": [
+        "Reforça a estrutura do fio e aumenta a resistência.",
+        "Pode ser misturado à máscara ou usado puro como finalizador.",
+        "Cabelos mais fortes e rejuvenescidos."
+      ],
+      "modo_de_uso": "Misture uma pequena quantidade à máscara ou aplique diretamente nos fios úmidos ou secos. Não enxágue.",
+      "uso_ideal": "1x por semana ou conforme necessidade"
+    },
+    "leave_in_resgate": {
+      "nome": "Leave-In Siàge Resgate Imediato 100ml",
+      "funcoes": ["reconstrução leve", "proteção térmica"],
+      "beneficios": [
+        "Reconstrói, fortalece e protege do calor.",
+        "Deixa os fios fortes, macios e brilhantes."
+      ],
+      "modo_de_uso": "Aplique nos cabelos úmidos ou secos antes de usar secador ou prancha. Não enxágue.",
+      "uso_ideal": "uso diário como protetor térmico"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Sensação de cabelo derretendo de tão macio.",
+      "Brilho intenso e textura de fio selado desde o primeiro uso.",
+      "Alívio imediato para cabelos ressecados e sem movimento."
+    ],
+    "riscos_de_excesso": [
+      "O uso excessivo da máscara ou booster pode deixar o cabelo pesado.",
+      "Evitar sobrepor com linhas reconstrutoras em sequência (ex: Reconstrói os Fios) para não perder leveza."
+    ],
+    "recomendacoes_profissionais": [
+      "Ideal para alternar com linhas de reconstrução (como Cica Therapy ou Reconstrói os Fios).",
+      "Excelente como tratamento pós-química leve ou pós-coloração.",
+      "Booster pode ser usado junto à máscara para resultados de salão."
+    ]
+  }
+}

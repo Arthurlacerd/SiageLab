@@ -1,0 +1,21 @@
+{
+  "familias": [
+    "glow_expert.json",
+    "cauterizacao_lisos.json",
+    "nutri_rose.json",
+    "acelera_crescimento.json",
+    "cica_therapy.json",
+    "liso_intenso.json",
+    "reconstroi_os_fios.json",
+    "hair_plastia.json",
+    "regeneracao_pos_quimica.json",
+    "nutri_oleos_poderosos.json",
+    "revela_os_cachos.json",
+    "cauterizacao_dos_fios.json",
+    "hidratacao_micelar.json",
+    "loiro_expert.json",
+    "combate_o_frizz.json",
+    "pro_cronology.json",
+    "men.json"
+  ]
+}

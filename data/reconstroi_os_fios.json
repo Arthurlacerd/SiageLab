@@ -1,0 +1,107 @@
+{
+  "id": "reconstroi_os_fios",
+  "nome": "Siàge Reconstrói os Fios",
+  "descricao": "Linha de reconstrução intensiva que repara profundamente a fibra capilar, devolve força e resistência, e garante cabelos macios e sem pontas duplas desde o primeiro uso.",
+  "publico_alvo": "Cabelos danificados, quebradiços, com pontas duplas ou enfraquecidos por química e calor.",
+  "classificacao": "reconstrução intensa e fortalecimento profundo",
+  "frequencia_segura": "uso de 1 a 2 vezes por semana, intercalado com linhas hidratantes e nutritivas",
+  "atributos": {
+    "brilho": 0.8,
+    "maciez": 0.85,
+    "reconstrucao": 1.0,
+    "nutricao": 0.75,
+    "controle": 0.8,
+    "antifrizz": 0.7,
+    "resistencia": 1.0
+  },
+  "principais_ativos": [
+    "Óleo de Argan — promove nutrição profunda e brilho imediato.",
+    "Queratina Líquida — reestrutura a fibra capilar e reduz a quebra desde o primeiro uso.",
+    "Biotecnologia Affinité 4D — garante tratamento prolongado e reparação contínua mesmo após o enxágue."
+  ],
+  "beneficios_gerais": [
+    "Repara 100% dos danos desde a primeira aplicação.",
+    "Devolve força, resistência e elasticidade aos fios.",
+    "Reduz pontas duplas e o frizz.",
+    "Cabelos macios, encorpados e com brilho saudável."
+  ],
+  "produtos": {
+    "shampoo": {
+      "nome": "Shampoo Siàge Reconstrói os Fios 250ml / 400ml",
+      "funcoes": ["limpeza suave", "preparo para reconstrução"],
+      "beneficios": [
+        "Limpa sem ressecar e fortalece desde a lavagem.",
+        "Prepara o fio para absorver melhor os ativos reconstrutores."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie o couro cabeludo e enxágue. Repita se necessário.",
+      "uso_ideal": "1 a 2 vezes por semana"
+    },
+    "condicionador": {
+      "nome": "Condicionador Siàge Reconstrói os Fios 200ml / 400ml",
+      "funcoes": ["selagem", "hidratação pós-reconstrução"],
+      "beneficios": [
+        "Sela as cutículas e reduz pontas duplas.",
+        "Deixa os fios sedosos e com aparência revitalizada."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, deixe agir por 1 minuto e enxágue.",
+      "uso_ideal": "pós-shampoo, intercalando com linhas leves"
+    },
+    "mascara": {
+      "nome": "Máscara Capilar Siàge Reconstrói os Fios 250g",
+      "funcoes": ["reparação intensiva", "reposição de massa e proteínas"],
+      "beneficios": [
+        "Reconstrói a estrutura interna da fibra capilar.",
+        "Cabelos até 3x mais fortes e hidratados.",
+        "Combate quebra e pontas duplas."
+      ],
+      "modo_de_uso": "Aplique após o shampoo, massageie mecha a mecha e deixe agir por 5 minutos. Enxágue bem.",
+      "uso_ideal": "tratamento semanal ou quinzenal"
+    },
+    "cc_cream": {
+      "nome": "CC Cream Siàge Reconstrói os Fios 100ml",
+      "funcoes": ["creme multifuncional", "proteção térmica e selagem"],
+      "beneficios": [
+        "12 benefícios em 1 produto, incluindo brilho, antifrizz e força.",
+        "Protege do calor e modela os fios sem pesar."
+      ],
+      "modo_de_uso": "Aplique nos cabelos úmidos ou secos e modele como desejar. Não enxágue.",
+      "uso_ideal": "finalização ou pré-escova"
+    },
+    "oleo_argan": {
+      "nome": "Óleo de Argan Siàge Reconstrói os Fios 60ml",
+      "funcoes": ["nutrição e brilho instantâneo", "proteção antifrizz"],
+      "beneficios": [
+        "Hidrata instantaneamente e elimina pontas duplas.",
+        "Deixa os fios alinhados e protegidos do calor."
+      ],
+      "modo_de_uso": "Aplique uma pequena quantidade no comprimento e pontas. Pode ser usado antes ou após escova/chapinha.",
+      "uso_ideal": "finalização ou umectação leve"
+    },
+    "queratina_liquida": {
+      "nome": "Queratina Líquida Siàge Reconstrói os Fios 60ml",
+      "funcoes": ["reposição de massa", "fortalecimento profundo"],
+      "beneficios": [
+        "Reforça a fibra capilar e aumenta a resistência.",
+        "Pode ser usada com fonte de calor para cauterização instantânea."
+      ],
+      "modo_de_uso": "Com o cabelo úmido, borrife o produto e penteie. Para cauterização, seque e passe chapinha. Não enxágue.",
+      "uso_ideal": "tratamento reconstrutor quinzenal"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Resultados visíveis na primeira aplicação.",
+      "Reduz a quebra e devolve brilho em cabelos elásticos.",
+      "Ideal para pós-progressiva e descoloração."
+    ],
+    "riscos_de_excesso": [
+      "Uso exagerado da queratina pode enrijecer os fios.",
+      "Evitar reconstruções em excesso para não sobrecarregar cabelos finos."
+    ],
+    "recomendacoes_profissionais": [
+      "Alternar com linhas hidratantes (Nutri Rosé, Cica Therapy) para manter equilíbrio.",
+      "Evitar usar queratina e máscara reconstrutora no mesmo dia.",
+      "Recomendado a cada 10–15 dias em cronogramas capilares equilibrados."
+    ]
+  }
+}

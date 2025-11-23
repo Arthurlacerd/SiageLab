@@ -1,0 +1,115 @@
+{
+  "id": "men",
+  "nome": "Siàge Men",
+  "descricao": "Linha completa de cuidados capilares masculinos que trata o couro cabeludo e os fios com tecnologia profissional. Proporciona controle da oleosidade, estímulo do crescimento e hidratação profunda, com sensação de frescor e leveza.",
+  "publico_alvo": "Homens com cabelo oleoso, normal ou misto, que buscam limpeza eficaz, controle da caspa, hidratação ou estímulo do crescimento.",
+  "classificacao": "cuidados diários e tratamento intensivo do couro cabeludo",
+  "frequencia_segura": "uso diário",
+  "atributos": {
+    "brilho": 0.8,
+    "maciez": 0.85,
+    "reconstrucao": 0.6,
+    "nutricao": 0.75,
+    "controle": 1.0,
+    "antifrizz": 0.5,
+    "resistencia": 0.9
+  },
+  "principais_ativos": [
+    "Mentol — proporciona sensação imediata de refrescância e auxilia no controle da oleosidade.",
+    "Zinco PCA — purifica o couro cabeludo e combate a oleosidade excessiva.",
+    "Baicapil™ e Biotina — estimulam o crescimento e reduzem a queda dos fios.",
+    "Piroctona Olamina e Vitamina B3 — combatem a caspa e equilibram o microbioma capilar.",
+    "Extrato de Bambu e Vitamina E — hidratam profundamente, mantendo os fios fortes e leves."
+  ],
+  "beneficios_gerais": [
+    "Reduz a oleosidade e mantém o couro cabeludo limpo por até 72h.",
+    "Combate a caspa e previne o reaparecimento.",
+    "Estimula o crescimento e fortalece os fios.",
+    "Promove hidratação sem pesar.",
+    "Proporciona sensação de limpeza e frescor prolongado."
+  ],
+  "produtos": {
+    "shampoo_limpeza_purificante": {
+      "nome": "Shampoo Siàge Men Limpeza Purificante 250ml",
+      "funcoes": ["limpeza profunda", "controle de oleosidade"],
+      "beneficios": [
+        "Remove impurezas e resíduos sem ressecar.",
+        "Mantém o couro cabeludo purificado e equilibrado.",
+        "Garante 72h de controle de oleosidade."
+      ],
+      "modo_de_uso": "Aplique nos cabelos úmidos, massageie até formar espuma e enxágue. Uso diário.",
+      "uso_ideal": "uso diário"
+    },
+    "shampoo_combate_caspa": {
+      "nome": "Shampoo Siàge Men Combate à Caspa 250ml",
+      "funcoes": ["controle de caspa", "equilíbrio do couro cabeludo"],
+      "beneficios": [
+        "Elimina até 100% das caspas visíveis.",
+        "Alivia coceira e irritação do couro cabeludo.",
+        "Reduz oleosidade e mantém sensação de limpeza."
+      ],
+      "modo_de_uso": "Aplique sobre os cabelos úmidos, massageie o couro cabeludo por alguns minutos até formar espuma e enxágue. Uso diário.",
+      "uso_ideal": "uso diário"
+    },
+    "shampoo_estimula_crescimento": {
+      "nome": "Shampoo Siàge Men Estimula o Crescimento 250ml",
+      "funcoes": ["estimula o crescimento", "fortalece a raiz"],
+      "beneficios": [
+        "Reduz a queda e estimula novos fios em até 30 dias.",
+        "Fortalece a raiz e aumenta a densidade capilar.",
+        "Prolonga a vida dos fios e restaura a vitalidade."
+      ],
+      "modo_de_uso": "Espalhe o shampoo nos cabelos úmidos, massageie suavemente e enxágue. Reaplique se necessário. Uso diário.",
+      "uso_ideal": "uso diário"
+    },
+    "condicionador_hidratacao_intensa": {
+      "nome": "Condicionador Siàge Men Hidratação Intensa 200ml",
+      "funcoes": ["hidratação leve", "fortalecimento diário"],
+      "beneficios": [
+        "Hidrata profundamente sem pesar.",
+        "Proporciona fios macios e fáceis de pentear.",
+        "Garante cabelos mais fortes e com aparência saudável."
+      ],
+      "modo_de_uso": "Após o shampoo, aplique nos fios, deixe agir por 1 minuto e enxágue. Uso diário.",
+      "uso_ideal": "uso diário"
+    },
+    "tonico_capilar": {
+      "nome": "Tônico Capilar Siàge Men Estimula o Crescimento 100ml",
+      "funcoes": ["tratamento antiqueda", "crescimento e fortalecimento"],
+      "beneficios": [
+        "Age diretamente no couro cabeludo, reduzindo a queda.",
+        "Estimula o crescimento de novos fios em até 30 dias.",
+        "Restaura a vitalidade e prolonga a vida dos fios."
+      ],
+      "modo_de_uso": "Com os cabelos úmidos ou secos, aplique diretamente no couro cabeludo e massageie. Uso diário, sem enxágue.",
+      "uso_ideal": "tratamento diário"
+    },
+    "pack_anticaspa": {
+      "nome": "Pack Shampoo e Condicionador Siàge Men Combate à Caspa",
+      "funcoes": ["tratamento anticaspa completo"],
+      "beneficios": [
+        "Entrega duas unidades do shampoo anticaspa em embalagem promocional.",
+        "Reduz a oleosidade e elimina a caspa visível.",
+        "Proporciona couro cabeludo saudável e livre de irritações."
+      ],
+      "modo_de_uso": "Durante o banho, aplique o shampoo nos cabelos úmidos, massageie e enxágue. Uso diário.",
+      "uso_ideal": "uso contínuo"
+    }
+  },
+  "observacoes_reais": {
+    "feedbacks_positivos": [
+      "Sensação de limpeza profunda e frescor imediato.",
+      "Cabelos mais fortes e livres de oleosidade excessiva.",
+      "Produtos práticos e de uso diário, com fragrância agradável."
+    ],
+    "riscos_de_excesso": [
+      "Uso excessivo de produtos purificantes pode ressecar os fios.",
+      "Evite combinar o tônico com outras loções capilares no mesmo dia."
+    ],
+    "recomendacoes_profissionais": [
+      "Indicado para homens com couro cabeludo oleoso ou com tendência à caspa.",
+      "Pode ser combinado com linhas unissex como Glow Expert para brilho adicional.",
+      "Ideal para manutenção diária entre tratamentos intensivos."
+    ]
+  }
+}
