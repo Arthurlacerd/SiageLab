@@ -93,16 +93,26 @@ formDiag.addEventListener("submit", async (e) => {
   const condicao = fd.get("condicao");
   const objetivo = fd.get("objetivo");
 
-  // Ajuste fino baseado na foto:
-  // Se brilho muito baixo → mais hidratação; se contraste muito alto (frizz/textura forte) → + nutrição/reconstrução
   const fotoAdj = photoAdjustment(fotoStats);
 
-  const { mensagem } = await postJSON("/api/diagnostico", { nome, tipoCabelo, condicao, objetivo });
-  msgDiag.innerHTML = mensagem;
+  try {
+    const resp = await postJSON("/api/diagnostico", { nome, tipoCabelo, condicao, objetivo });
 
-  const plano = await gerarCronograma({ tipoCabelo, condicao, objetivo, fotoAdj });
-  renderCronograma(plano);
-  renderTipsConsultora(plano, objetivo);
+    // texto principal
+    msgDiag.innerHTML = resp.mensagem || "Diagnóstico gerado com sucesso. 😉";
+
+    // se o backend mandar linhas recomendadas, a gente mostra
+    if (resp.recomendadas && Array.isArray(resp.recomendadas)) {
+      renderLinhasRecomendadas(resp.recomendadas);
+    }
+
+    const plano = await gerarCronograma({ tipoCabelo, condicao, objetivo, fotoAdj });
+    renderCronograma(plano);
+    renderTipsConsultora(plano, objetivo);
+  } catch (err) {
+    console.error(err);
+    msgDiag.innerHTML = `<span class="erro">Deu erro ao gerar o diagnóstico. Tenta de novo.</span>`;
+  }
 });
 
 function photoAdjustment(stats){
@@ -315,4 +325,30 @@ function injectThemeClass(cls, c1, c2){
   const style = document.createElement("style");
   style.textContent = `body.${cls}{ --accent:${c1}; --accent-2:${c2}; }`;
   document.head.appendChild(style);
+}
+function renderLinhasRecomendadas(lista) {
+  const container = document.querySelector("#linhasRecomendadas");
+  if (!container) return; // se não tiver na tela, só ignora
+
+  if (!lista.length) {
+    container.innerHTML = "";
+    return;
+  }
+
+  container.innerHTML = `
+    <h3>Linhas Siàge recomendadas para você</h3>
+    <div class="familias-grid">
+      ${lista.map(f => `
+        <article class="familia-card">
+          <h4>${f.nome}</h4>
+          <p class="familia-classificacao">${f.classificacao || ""}</p>
+          <p class="familia-publico">${f.publico_alvo || ""}</p>
+          ${f.score != null ? `<p class="familia-score">Match: ${(f.score * 100).toFixed(0)}%</p>` : ""}
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+if (resp.recomendadas && Array.isArray(resp.recomendadas)) {
+  renderLinhasRecomendadas(resp.recomendadas);
 }
