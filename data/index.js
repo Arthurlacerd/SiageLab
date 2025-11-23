@@ -38,7 +38,6 @@ function normalizarFamilia(parsed, fileName) {
   return {
     id,
     ...conteudo,
-    id: id,
     atributos: conteudo.atributos || {},
   };
 }
