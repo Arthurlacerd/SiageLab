@@ -4,6 +4,7 @@ const cronogramaBox = document.querySelector("#cronogramaBox");
 const statusDiag = document.querySelector("#statusDiag");
 const familiasCatalogo = document.querySelector("#familiasCatalogo");
 const linhaGrid = document.querySelector("#linhaGrid");
+
 const consultoraFamiliaSelect = document.querySelector("#consultoraFamilia");
 const consultoraStatus = document.querySelector("#consultoraStatus");
 const consultoraKit = document.querySelector("#kitSugestoes");
@@ -116,7 +117,7 @@ export function renderLinhaSelector(lista = []) {
   if (!linhaGrid) return;
 
   if (!lista.length) {
-    linhaGrid.innerHTML = "<p class=\"muted\">Não há linhas para escolher.</p>";
+    linhaGrid.innerHTML = '<p class="muted">Não há linhas para escolher.</p>';
     return;
   }
 
@@ -147,7 +148,9 @@ export function renderConsultoraSelect(lista = []) {
     '<option value="">Selecione uma família</option>',
     ...lista.map(
       (familia) =>
-        `<option value="${familia.id}">${familia.nome || familia.id} — ${familia.classificacao || "Linha"}</option>`
+        `<option value="${familia.id}">${familia.nome || familia.id} — ${
+          familia.classificacao || "Linha"
+        }</option>`
     ),
   ];
 
@@ -160,7 +163,14 @@ export function renderConsultoraStatus(message, tone = "info") {
   consultoraStatus.dataset.tone = tone;
 }
 
-export function renderConsultoraKit({ familia, perfil, essenciais = [], complementares = [], recomendacoes = [], matchTexto }) {
+export function renderConsultoraKit({
+  familia,
+  perfil,
+  essenciais = [],
+  complementares = [],
+  recomendacoes = [],
+  matchTexto,
+}) {
   if (!consultoraKit) return;
 
   if (!familia) {
@@ -170,7 +180,7 @@ export function renderConsultoraKit({ familia, perfil, essenciais = [], compleme
 
   const pillPerfil = [perfil?.tipoCabelo, perfil?.condicao, perfil?.objetivo]
     .filter(Boolean)
-    .map((txt) => `<span class="pill-tag">${txt}</span>`) // eslint-disable-line quotes
+    .map((txt) => `<span class="pill-tag">${txt}</span>`)
     .join(" ");
 
   const renderItem = (item) => `
@@ -201,8 +211,7 @@ export function renderConsultoraKit({ familia, perfil, essenciais = [], compleme
 
   const listaRecs = recomendacoes.length
     ? `<div class="kit-recs"><h4>Observações de consultoria</h4><ul>${recomendacoes
-        .map((rec) => `<li>${rec}</li>`)
-        .join("")}</ul></div>`
+        .map((rec) => `<li>${rec}</li>`).join("")}</ul></div>`
     : "";
 
   consultoraKit.innerHTML = `

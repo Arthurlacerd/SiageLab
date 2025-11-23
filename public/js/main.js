@@ -14,17 +14,23 @@ import {
   renderLinhas,
   showStatus,
 } from "./renderers.js";
-import { bindFamiliaCatalogo, bindLinhaSelector, wireNavigation } from "./interactions.js";
+import {
+  bindFamiliaCatalogo,
+  bindLinhaSelector,
+  wireNavigation,
+} from "./interactions.js";
 
 const formDiag = document.querySelector("#form-diagnostico");
 const familiasCatalogo = document.querySelector("#familiasCatalogo");
 const refreshFamilias = document.querySelector("#refreshFamilias");
 const linhaGrid = document.querySelector("#linhaGrid");
 const btnAvancarGaleria = document.querySelector("#btnAvancarGaleria");
+
 const consultoraForm = document.querySelector("#consultoraForm");
 const consultoraFamiliaSelect = document.querySelector("#consultoraFamilia");
 
 let familiasCache = [];
+
 const accentMap = {
   hidratacao_micelar: "#a6e4ff",
   cauterizacao_dos_fios: "#d7c0ff",
@@ -113,7 +119,14 @@ function montarKitConsultora(perfil, familia) {
     ...(observacoes.riscos_de_excesso || []),
   ].slice(0, 5);
 
-  return { familia, perfil, essenciais, complementares, recomendacoes, matchTexto };
+  return {
+    familia,
+    perfil,
+    essenciais,
+    complementares,
+    recomendacoes,
+    matchTexto,
+  };
 }
 
 async function executarDiagnostico(event) {
@@ -134,7 +147,10 @@ async function executarDiagnostico(event) {
     renderCronograma(plano.cronograma || []);
   } catch (err) {
     console.error(err);
-    showStatus(err.message || "Não foi possível gerar o diagnóstico agora.", "error");
+    showStatus(
+      err.message || "Não foi possível gerar o diagnóstico agora.",
+      "error"
+    );
     renderMensagem("");
     renderLinhas([]);
     renderCronograma([]);
@@ -144,8 +160,12 @@ async function executarDiagnostico(event) {
 function main() {
   wireNavigation();
   carregarFamilias();
+
+  // Estado inicial do modo Consultora
   renderConsultoraKit({});
-  renderConsultoraStatus("Selecione um perfil e uma família para começar.");
+  renderConsultoraStatus(
+    "Selecione um perfil e uma família para começar."
+  );
 
   bindFamiliaCatalogo(familiasCatalogo);
   bindLinhaSelector(linhaGrid, (linhaId) => {
@@ -156,6 +176,7 @@ function main() {
   consultoraForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     renderConsultoraStatus("Montando kit sob medida...", "info");
+
     const perfil = {
       tipoCabelo: consultoraForm.querySelector("[name=tipoCabelo]")?.value,
       condicao: consultoraForm.querySelector("[name=condicao]")?.value,
@@ -166,14 +187,20 @@ function main() {
     const familia = familiasCache.find((f) => f.id === familiaId);
 
     if (!familia) {
-      renderConsultoraStatus("Escolha uma família para gerar o kit.", "error");
+      renderConsultoraStatus(
+        "Escolha uma família para gerar o kit.",
+        "error"
+      );
       renderConsultoraKit({});
       return;
     }
 
     aplicarTema(familia.id);
     const kit = montarKitConsultora(perfil, familia);
-    renderConsultoraStatus("Kit gerado com base no perfil da cliente.", "success");
+    renderConsultoraStatus(
+      "Kit gerado com base no perfil da cliente.",
+      "success"
+    );
     renderConsultoraKit(kit);
   });
 
