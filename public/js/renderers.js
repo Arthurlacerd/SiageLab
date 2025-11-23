@@ -4,6 +4,7 @@ const cronogramaBox = document.querySelector("#cronogramaBox");
 const statusDiag = document.querySelector("#statusDiag");
 const familiasCatalogo = document.querySelector("#familiasCatalogo");
 const linhaGrid = document.querySelector("#linhaGrid");
+
 const consultoraFamiliaSelect = document.querySelector("#consultoraFamilia");
 const consultoraStatus = document.querySelector("#consultoraStatus");
 const consultoraKit = document.querySelector("#kitSugestoes");
@@ -52,7 +53,11 @@ export function renderLinhas(lista = []) {
             <h4>${f.nome}</h4>
           </header>
           <p class="familia-publico">${f.publico_alvo || "Todos os tipos"}</p>
-          ${f.score != null ? `<p class="familia-score">Match ${(f.score * 100).toFixed(0)}%</p>` : ""}
+          ${
+            f.score != null
+              ? `<p class="familia-score">Match ${(f.score * 100).toFixed(0)}%</p>`
+              : ""
+          }
         </article>`
         )
         .join("")}
@@ -91,7 +96,8 @@ export function renderFamiliasCatalogo(lista = []) {
   if (!familiasCatalogo) return;
 
   if (!lista.length) {
-    familiasCatalogo.innerHTML = '<p class="muted">Nenhuma linha encontrada.</p>';
+    familiasCatalogo.innerHTML =
+      '<p class="muted">Nenhuma linha encontrada.</p>';
     return;
   }
 
@@ -104,8 +110,12 @@ export function renderFamiliasCatalogo(lista = []) {
           <h4>${familia.nome}</h4>
         </header>
         <p class="familia-publico">${familia.publico_alvo || ""}</p>
-        <p class="familia-atributos">${formatarAtributos(familia.atributos)}</p>
-        <button class="btn btn-ghost" type="button" data-familia-id="${familia.id}">Ver detalhes</button>
+        <p class="familia-atributos">${formatarAtributos(
+          familia.atributos
+        )}</p>
+        <button class="btn btn-ghost" type="button" data-familia-id="${
+          familia.id
+        }">Ver detalhes</button>
       </article>
     `
     )
@@ -116,7 +126,7 @@ export function renderLinhaSelector(lista = []) {
   if (!linhaGrid) return;
 
   if (!lista.length) {
-    linhaGrid.innerHTML = "<p class=\"muted\">Não há linhas para escolher.</p>";
+    linhaGrid.innerHTML = '<p class="muted">Não há linhas para escolher.</p>';
     return;
   }
 
@@ -139,7 +149,8 @@ export function renderConsultoraSelect(lista = []) {
   consultoraFamiliaSelect.innerHTML = "";
 
   if (!lista.length) {
-    consultoraFamiliaSelect.innerHTML = '<option value="">Sem linhas disponíveis</option>';
+    consultoraFamiliaSelect.innerHTML =
+      '<option value="">Sem linhas disponíveis</option>';
     return;
   }
 
@@ -147,7 +158,9 @@ export function renderConsultoraSelect(lista = []) {
     '<option value="">Selecione uma família</option>',
     ...lista.map(
       (familia) =>
-        `<option value="${familia.id}">${familia.nome || familia.id} — ${familia.classificacao || "Linha"}</option>`
+        `<option value="${familia.id}">${familia.nome || familia.id} — ${
+          familia.classificacao || "Linha"
+        }</option>`
     ),
   ];
 
@@ -160,17 +173,25 @@ export function renderConsultoraStatus(message, tone = "info") {
   consultoraStatus.dataset.tone = tone;
 }
 
-export function renderConsultoraKit({ familia, perfil, essenciais = [], complementares = [], recomendacoes = [], matchTexto }) {
+export function renderConsultoraKit({
+  familia,
+  perfil,
+  essenciais = [],
+  complementares = [],
+  recomendacoes = [],
+  matchTexto,
+}) {
   if (!consultoraKit) return;
 
   if (!familia) {
-    consultoraKit.innerHTML = '<p class="muted">Selecione uma família para montar o kit.</p>';
+    consultoraKit.innerHTML =
+      '<p class="muted">Selecione uma família para montar o kit.</p>';
     return;
   }
 
   const pillPerfil = [perfil?.tipoCabelo, perfil?.condicao, perfil?.objetivo]
     .filter(Boolean)
-    .map((txt) => `<span class="pill-tag">${txt}</span>`) // eslint-disable-line quotes
+    .map((txt) => `<span class="pill-tag">${txt}</span>`)
     .join(" ");
 
   const renderItem = (item) => `
@@ -181,7 +202,9 @@ export function renderConsultoraKit({ familia, perfil, essenciais = [], compleme
       </header>
       <p class="muted">${item.descricao || ""}</p>
       <ul class="produto-beneficios">
-        ${(item.beneficios || []).map((b) => `<li>${b}</li>`).join("")}
+        ${(item.beneficios || [])
+          .map((b) => `<li>${b}</li>`)
+          .join("")}
       </ul>
       <p class="modo-uso">${item.modo_de_uso || item.uso_ideal || ""}</p>
     </article>

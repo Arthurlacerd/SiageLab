@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SiàgeLab — Diagnóstico Capilar</title>
@@ -8,10 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css" />
-    <meta name="theme-color" content="#d98fcf" />
-    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin></script>
-  </head>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#d98fcf" />
+
+  <!-- jsPDF para exportar diagnóstico/cronograma em PDF -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin></script>
+</head>
 <body>
   <header class="site-header" role="banner">
     <div class="brand container">
@@ -30,12 +32,16 @@
   </header>
 
   <main>
+    <!-- ======================== HERO ======================== -->
     <section id="hero" class="section hero">
       <div class="hero-content container">
         <div class="hero-copy">
           <p class="eyebrow">Experiência imersiva Siàge</p>
           <h1 class="display">Seu cabelo tem voz.</h1>
-          <p class="lead">Crie um plano de cuidados sob medida usando o acervo de linhas Siàge. O site acompanha sua escolha de estética e mostra sugestões em tempo real.</p>
+          <p class="lead">
+            Crie um plano de cuidados sob medida usando o acervo de linhas Siàge.
+            O site acompanha sua escolha de estética e mostra sugestões em tempo real.
+          </p>
           <div class="cta-row">
             <button id="btnComecar" class="btn btn-primary">Começar</button>
             <a href="#diagnostico" class="btn btn-outline">Ir direto ao diagnóstico</a>
@@ -44,16 +50,23 @@
             <span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
           </div>
         </div>
+
         <div class="hero-visual">
           <div class="hero-glow"></div>
           <picture class="hero-art" aria-hidden="true">
-            <source media="(min-width: 900px)" srcset="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="" loading="lazy">
+            <source
+              media="(min-width: 900px)"
+              srcset="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop">
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
+              alt="Modelo com cabelo iluminado"
+              loading="lazy">
           </picture>
         </div>
       </div>
     </section>
 
+    <!-- ======================== CONSULTORA ======================== -->
     <section id="consultora" class="section consultora" aria-labelledby="tconsultora">
       <div class="container">
         <div class="section-head">
@@ -66,6 +79,7 @@
         </div>
 
         <div class="consultora-grid">
+          <!-- FORMULÁRIO CONSULTORA -->
           <form id="consultoraForm" class="card form-card" autocomplete="on">
             <div class="consultora-head">
               <p class="pill-tag">Perfil da cliente</p>
@@ -105,6 +119,7 @@
             <button class="btn btn-primary" type="submit">Gerar kit personalizado</button>
           </form>
 
+          <!-- RESULTADO DO KIT -->
           <div class="card consultora-result">
             <div class="consultora-head">
               <p class="pill-tag">Sugestões automáticas</p>
@@ -117,6 +132,7 @@
       </div>
     </section>
 
+    <!-- ======================== LINHAS ======================== -->
     <section id="linha" class="section linha" aria-labelledby="tlinhas">
       <div class="container">
         <div class="section-head">
@@ -138,6 +154,7 @@
       </div>
     </section>
 
+    <!-- ======================== GALERIA ======================== -->
     <section id="galeria" class="section galeria" aria-labelledby="tgaleria">
       <div class="container">
         <div class="section-head">
@@ -151,28 +168,36 @@
 
         <div class="grid-gallery">
           <figure class="tile" style="--focus: 50% 20%;">
-            <img src="https://images.unsplash.com/photo-1531727991582-cfd25ce79613?q=80&w=1200&auto=format&fit=crop" alt="Mulher real com cabelo brilhante" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1531727991582-cfd25ce79613?q=80&w=1200&auto=format&fit=crop"
+                 alt="Mulher real com cabelo brilhante" loading="lazy">
           </figure>
           <figure class="tile" style="--focus: 50% 35%;">
-            <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1200&auto=format&fit=crop" alt="Close de fios com reflexo de luz" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1200&auto=format&fit=crop"
+                 alt="Close de fios com reflexo de luz" loading="lazy">
           </figure>
           <figure class="tile" style="--focus: 50% 30%;">
-            <img src="https://images.unsplash.com/photo-1519415943484-9fa18778a6e1?q=80&w=1200&auto=format&fit=crop" alt="Textura lisa com acabamento espelhado" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1519415943484-9fa18778a6e1?q=80&w=1200&auto=format&fit=crop"
+                 alt="Textura lisa com acabamento espelhado" loading="lazy">
           </figure>
           <figure class="tile" style="--focus: 50% 50%;">
-            <img src="https://images.unsplash.com/photo-1582094397004-8c3a7a38b3d2?q=80&w=1200&auto=format&fit=crop" alt="Composição de cosméticos em cenário clean" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1582094397004-8c3a7a38b3d2?q=80&w=1200&auto=format&fit=crop"
+                 alt="Composição de cosméticos em cenário clean" loading="lazy">
           </figure>
           <figure class="tile" style="--focus: 50% 25%;">
-            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Modelo com ondas definidas" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop"
+                 alt="Modelo com ondas definidas" loading="lazy">
           </figure>
           <figure class="tile" style="--focus: 50% 40%;">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Detalhe de brilho no comprimento" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
+                 alt="Detalhe de brilho no comprimento" loading="lazy">
           </figure>
           <figure class="tile" style="--focus: 50% 25%;">
-            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Campanha com vibe Niina Secrets" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop"
+                 alt="Campanha com vibe Niina Secrets" loading="lazy">
           </figure>
           <figure class="tile" style="--focus: 50% 50%;">
-            <img src="https://images.unsplash.com/photo-1582094397004-8c3a7a38b3d2?q=80&w=1200&auto=format&fit=crop" alt="Produto em still minimalista" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1582094397004-8c3a7a38b3d2?q=80&w=1200&auto=format&fit=crop"
+                 alt="Produto em still minimalista" loading="lazy">
           </figure>
         </div>
 
@@ -182,15 +207,19 @@
       </div>
     </section>
 
+    <!-- ======================== COLEÇÃO ======================== -->
     <section id="colecao" class="section colecao" aria-labelledby="tcolecao">
       <div class="container">
         <div class="section-head">
           <div>
             <p class="eyebrow">Rotas REST</p>
             <h2 id="tcolecao" class="title">Linhas Siàge em destaque</h2>
-            <p class="muted">Conteúdo carregado dinamicamente de <code>/familias</code>. Clique para saber mais.</p>
+            <p class="muted">
+              Conteúdo carregado dinamicamente de <code>/familias</code>. Clique para saber mais.
+            </p>
           </div>
-          <button id="refreshFamilias" class="btn btn-outline" aria-label="Atualizar lista de famílias">Atualizar</button>
+          <button id="refreshFamilias" class="btn btn-outline"
+                  aria-label="Atualizar lista de famílias">Atualizar</button>
         </div>
 
         <div id="familiasCatalogo" class="familias-grid" role="list">
@@ -201,6 +230,7 @@
       </div>
     </section>
 
+    <!-- ======================== DIAGNÓSTICO ======================== -->
     <section id="diagnostico" class="section diagnostico" aria-labelledby="tdiag">
       <div class="container">
         <div class="card form-card">
@@ -245,16 +275,23 @@
           </form>
 
           <div class="feedback" role="status" aria-live="polite" id="statusDiag"></div>
+
           <div class="export-bar">
-            <button id="btnExportDiag" class="btn btn-outline" type="button" disabled>Exportar diagnóstico (PDF)</button>
-            <button id="btnExportCrono" class="btn btn-ghost" type="button" disabled>Exportar cronograma (PDF)</button>
+            <button id="btnExportDiag" class="btn btn-outline" type="button" disabled>
+              Exportar diagnóstico (PDF)
+            </button>
+            <button id="btnExportCrono" class="btn btn-ghost" type="button" disabled>
+              Exportar cronograma (PDF)
+            </button>
           </div>
+
           <div id="resultado" class="result"></div>
           <div id="linhasRecomendadas" class="result"></div>
           <div id="cronogramaBox" class="result"></div>
 
           <div class="progress small" aria-hidden="true">
-            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            <span class="dot filled"></span><span class="dot filled"></span>
+            <span class="dot filled"></span><span class="dot filled"></span>
           </div>
         </div>
       </div>
