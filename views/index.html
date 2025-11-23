@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SiàgeLab — Diagnóstico Capilar</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
@@ -13,7 +12,6 @@
   <meta name="theme-color" content="#d98fcf" />
 </head>
 <body>
-  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="brand container">
       <div class="brand-left">
@@ -29,155 +27,175 @@
     </div>
   </header>
 
-  <!-- HERO (rosa delicado inicial) -->
-  <section id="hero" class="section hero">
-    <div class="hero-content container">
-      <h1 class="display">Seu cabelo tem voz.</h1>
-      <p class="lead">Experiência editorial minimalista com personalização em tempo real. Escolha sua linha Siàge e veja o site acompanhar sua estética.</p>
-      <div class="cta-row">
-        <button id="btnComecar" class="btn btn-primary">Começar</button>
-        <a href="#diagnostico" class="btn btn-outline">Ir direto ao diagnóstico</a>
-      </div>
-      <div class="progress small" aria-hidden="true">
-        <span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      </div>
-    </div>
-    <div class="hero-glow"></div>
-    <picture class="hero-art" aria-hidden="true">
-      <source media="(min-width: 900px)" srcset="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="" loading="lazy">
-    </picture>
-  </section>
-
-  <!-- SELETOR DE LINHA -->
-  <section id="linha" class="section linha" aria-labelledby="tlinhas">
-    <div class="container">
-      <h2 id="tlinhas" class="title center">Qual linha Siàge é a sua favorita?</h2>
-      <p class="muted center">Ao selecionar, o site muda automaticamente para a paleta dessa linha.</p>
-
-      <div class="linha-grid" role="list">
-        <button role="listitem" class="opcao-linha" data-linha="nutricao">Nutri Óleos Poderosos</button>
-        <button role="listitem" class="opcao-linha" data-linha="cauterizacao">Cauterização dos Lisos</button>
-        <button role="listitem" class="opcao-linha" data-linha="brilho">Brilho Extremo</button>
-        <button role="listitem" class="opcao-linha" data-linha="hidratacao">Hidratação Micelar</button>
-        <button role="listitem" class="opcao-linha" data-linha="reconstrucao">Reconstrói os Fios</button>
-        <button role="listitem" class="opcao-linha" data-linha="liso">Liso Intenso</button>
-      </div>
-
-      <div class="center">
-        <button id="btnAvancarGaleria" class="btn btn-outline" disabled>Avançar</button>
-      </div>
-
-      <div class="progress small" aria-hidden="true">
-        <span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERIA (quadrados de imagens) -->
-  <section id="galeria" class="section galeria" aria-labelledby="tgaleria">
-    <div class="container">
-      <h2 id="tgaleria" class="title center">Inspiração & Produto</h2>
-
-      <div class="grid-gallery">
-        <!-- use --focus para ajustar o recorte por imagem -->
-        <figure class="tile" style="--focus: 50% 20%;">
-          <img src="https://images.unsplash.com/photo-1531727991582-cfd25ce79613?q=80&w=1200&auto=format&fit=crop" alt="Mulher real com cabelo brilhante" loading="lazy">
-        </figure>
-        <figure class="tile" style="--focus: 50% 35%;">
-          <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1200&auto=format&fit=crop" alt="Close de fios com reflexo de luz" loading="lazy">
-        </figure>
-        <figure class="tile" style="--focus: 50% 30%;">
-          <img src="https://images.unsplash.com/photo-1519415943484-9fa18778a6e1?q=80&w=1200&auto=format&fit=crop" alt="Textura lisa com acabamento espelhado" loading="lazy">
-        </figure>
-        <figure class="tile" style="--focus: 50% 50%;">
-          <img src="https://images.unsplash.com/photo-1582094397004-8c3a7a38b3d2?q=80&w=1200&auto=format&fit=crop" alt="Composição de cosméticos em cenário clean" loading="lazy">
-        </figure>
-        <figure class="tile" style="--focus: 50% 25%;">
-          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Modelo com ondas definidas" loading="lazy">
-        </figure>
-        <figure class="tile" style="--focus: 50% 40%;">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Detalhe de brilho no comprimento" loading="lazy">
-        </figure>
-        <figure class="tile" style="--focus: 50% 25%;">
-          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Campanha com vibe Niina Secrets" loading="lazy">
-        </figure>
-        <figure class="tile" style="--focus: 50% 50%;">
-          <img src="https://images.unsplash.com/photo-1582094397004-8c3a7a38b3d2?q=80&w=1200&auto=format&fit=crop" alt="Produto em still minimalista" loading="lazy">
-        </figure>
-      </div>
-
-      <div class="center">
-        <a href="#diagnostico" class="btn btn-primary">Seguir para diagnóstico</a>
-      </div>
-
-      <div class="progress small" aria-hidden="true">
-        <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORM + RESULTADO -->
-  <section id="diagnostico" class="section diagnostico" aria-labelledby="tdiag">
-    <div class="container">
-      <div class="card form-card">
-        <h2 id="tdiag" class="title center">Diagnóstico Capilar</h2>
-
-        <form id="form-diagnostico" class="form" autocomplete="on" aria-describedby="dicaDiag">
-          <p id="dicaDiag" class="muted center">Leva menos de 2 minutos e te dá um plano personalizado.</p>
-
-          <label for="nome">Nome</label>
-          <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required />
-
-          <div class="grid-2">
-            <div>
-              <label for="tipoCabelo">Tipo de cabelo</label>
-              <select id="tipoCabelo" required>
-                <option value="liso">Liso</option>
-                <option value="ondulado">Ondulado</option>
-                <option value="cacheado">Cacheado</option>
-                <option value="crespo">Crespo</option>
-              </select>
-            </div>
-            <div>
-              <label for="condicao">Condição atual</label>
-              <select id="condicao" required>
-                <option value="saudavel">Saudável</option>
-                <option value="ressecado">Ressecado</option>
-                <option value="danificado">Danificado</option>
-                <option value="oleoso">Oleoso</option>
-              </select>
-            </div>
+  <main>
+    <section id="hero" class="section hero">
+      <div class="hero-content container">
+        <div class="hero-copy">
+          <p class="eyebrow">Experiência imersiva Siàge</p>
+          <h1 class="display">Seu cabelo tem voz.</h1>
+          <p class="lead">Crie um plano de cuidados sob medida usando o acervo de linhas Siàge. O site acompanha sua escolha de estética e mostra sugestões em tempo real.</p>
+          <div class="cta-row">
+            <button id="btnComecar" class="btn btn-primary">Começar</button>
+            <a href="#diagnostico" class="btn btn-outline">Ir direto ao diagnóstico</a>
           </div>
-
-          <label for="objetivo">Objetivo do tratamento</label>
-          <select id="objetivo" required>
-            <option value="brilho">Brilho</option>
-            <option value="força">Força</option>
-            <option value="hidratação">Hidratação</option>
-            <option value="crescimento">Crescimento</option>
-            <option value="equilíbrio">Equilíbrio</option>
-          </select>
-
-          <button id="gerarBtn" class="btn btn-primary" type="submit">Gerar diagnóstico</button>
-        </form>
-
-        <div id="resultado" class="result" aria-live="polite"></div>
-        <div id="linhasRecomendadas" class="result"></div>
-        <div id="cronogramaBox" class="result"></div>
-
-        <div class="progress small" aria-hidden="true">
-          <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+          <div class="progress small" aria-hidden="true">
+            <span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-glow"></div>
+          <picture class="hero-art" aria-hidden="true">
+            <source media="(min-width: 900px)" srcset="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="" loading="lazy">
+          </picture>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+    <section id="linha" class="section linha" aria-labelledby="tlinhas">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Paleta dinâmica</p>
+            <h2 id="tlinhas" class="title">Escolha sua linha favorita</h2>
+            <p class="muted">Ao selecionar, o site muda automaticamente para a paleta dessa linha.</p>
+          </div>
+          <button id="btnAvancarGaleria" class="btn btn-outline" disabled>Avançar</button>
+        </div>
+
+        <div class="linha-grid" role="list" id="linhaGrid">
+          <!-- preenchido via JS a partir de /familias -->
+        </div>
+
+        <div class="progress small" aria-hidden="true">
+          <span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section galeria" aria-labelledby="tgaleria">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Moodboard</p>
+            <h2 id="tgaleria" class="title">Inspiração & Produto</h2>
+            <p class="muted">Visual editorial minimalista com recortes responsivos.</p>
+          </div>
+          <a href="#diagnostico" class="btn btn-primary">Seguir para diagnóstico</a>
+        </div>
+
+        <div class="grid-gallery">
+          <figure class="tile" style="--focus: 50% 20%;">
+            <img src="https://images.unsplash.com/photo-1531727991582-cfd25ce79613?q=80&w=1200&auto=format&fit=crop" alt="Mulher real com cabelo brilhante" loading="lazy">
+          </figure>
+          <figure class="tile" style="--focus: 50% 35%;">
+            <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1200&auto=format&fit=crop" alt="Close de fios com reflexo de luz" loading="lazy">
+          </figure>
+          <figure class="tile" style="--focus: 50% 30%;">
+            <img src="https://images.unsplash.com/photo-1519415943484-9fa18778a6e1?q=80&w=1200&auto=format&fit=crop" alt="Textura lisa com acabamento espelhado" loading="lazy">
+          </figure>
+          <figure class="tile" style="--focus: 50% 50%;">
+            <img src="https://images.unsplash.com/photo-1582094397004-8c3a7a38b3d2?q=80&w=1200&auto=format&fit=crop" alt="Composição de cosméticos em cenário clean" loading="lazy">
+          </figure>
+          <figure class="tile" style="--focus: 50% 25%;">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Modelo com ondas definidas" loading="lazy">
+          </figure>
+          <figure class="tile" style="--focus: 50% 40%;">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Detalhe de brilho no comprimento" loading="lazy">
+          </figure>
+          <figure class="tile" style="--focus: 50% 25%;">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Campanha com vibe Niina Secrets" loading="lazy">
+          </figure>
+          <figure class="tile" style="--focus: 50% 50%;">
+            <img src="https://images.unsplash.com/photo-1582094397004-8c3a7a38b3d2?q=80&w=1200&auto=format&fit=crop" alt="Produto em still minimalista" loading="lazy">
+          </figure>
+        </div>
+
+        <div class="progress small" aria-hidden="true">
+          <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="colecao" class="section colecao" aria-labelledby="tcolecao">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Rotas REST</p>
+            <h2 id="tcolecao" class="title">Linhas Siàge em destaque</h2>
+            <p class="muted">Conteúdo carregado dinamicamente de <code>/familias</code>. Clique para saber mais.</p>
+          </div>
+          <button id="refreshFamilias" class="btn btn-outline" aria-label="Atualizar lista de famílias">Atualizar</button>
+        </div>
+
+        <div id="familiasCatalogo" class="familias-grid" role="list">
+          <div class="skeleton-card" aria-hidden="true"></div>
+          <div class="skeleton-card" aria-hidden="true"></div>
+          <div class="skeleton-card" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diagnostico" class="section diagnostico" aria-labelledby="tdiag">
+      <div class="container">
+        <div class="card form-card">
+          <h2 id="tdiag" class="title center">Diagnóstico Capilar</h2>
+          <p class="muted center">Leva menos de 2 minutos e gera um plano personalizado.</p>
+
+          <form id="form-diagnostico" class="form" autocomplete="on">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required />
+
+            <div class="grid-2">
+              <div>
+                <label for="tipoCabelo">Tipo de cabelo</label>
+                <select id="tipoCabelo" name="tipoCabelo" required>
+                  <option value="liso">Liso</option>
+                  <option value="ondulado">Ondulado</option>
+                  <option value="cacheado">Cacheado</option>
+                  <option value="crespo">Crespo</option>
+                </select>
+              </div>
+              <div>
+                <label for="condicao">Condição atual</label>
+                <select id="condicao" name="condicao" required>
+                  <option value="saudavel">Saudável</option>
+                  <option value="ressecado">Ressecado</option>
+                  <option value="danificado">Danificado</option>
+                  <option value="oleoso">Oleoso</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="objetivo">Objetivo do tratamento</label>
+            <select id="objetivo" name="objetivo" required>
+              <option value="brilho">Brilho</option>
+              <option value="força">Força</option>
+              <option value="hidratação">Hidratação</option>
+              <option value="crescimento">Crescimento</option>
+              <option value="equilíbrio">Equilíbrio</option>
+            </select>
+
+            <button id="gerarBtn" class="btn btn-primary" type="submit">Gerar diagnóstico</button>
+          </form>
+
+          <div class="feedback" role="status" aria-live="polite" id="statusDiag"></div>
+          <div id="resultado" class="result"></div>
+          <div id="linhasRecomendadas" class="result"></div>
+          <div id="cronogramaBox" class="result"></div>
+
+          <div class="progress small" aria-hidden="true">
+            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="site-footer">
     <p>© 2025 SiàgeLab — desenvolvido com 💜 e tecnologia.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
 </html>
