@@ -22,6 +22,7 @@ const familiasCatalogo = document.querySelector("#familiasCatalogo");
 const refreshFamilias = document.querySelector("#refreshFamilias");
 const linhaGrid = document.querySelector("#linhaGrid");
 const btnAvancarGaleria = document.querySelector("#btnAvancarGaleria");
+
 const consultoraForm = document.querySelector("#consultoraForm");
 const consultoraFamiliaSelect = document.querySelector("#consultoraFamilia");
 const btnExportDiag = document.querySelector("#btnExportDiag");
@@ -31,6 +32,7 @@ let familiasCache = [];
 let ultimoPerfil = null;
 let ultimoDiagnostico = null;
 let ultimoCronograma = null;
+
 const accentMap = {
   hidratacao_micelar: "#a6e4ff",
   cauterizacao_dos_fios: "#d7c0ff",
@@ -119,16 +121,26 @@ function montarKitConsultora(perfil, familia) {
     ...(observacoes.riscos_de_excesso || []),
   ].slice(0, 5);
 
-  return { familia, perfil, essenciais, complementares, recomendacoes, matchTexto };
+  return {
+    familia,
+    perfil,
+    essenciais,
+    complementares,
+    recomendacoes,
+    matchTexto,
+  };
 }
 
 async function executarDiagnostico(event) {
   event.preventDefault();
   const payload = coletarPayload();
+
+  // zera cache para nova exportação
   ultimoPerfil = payload;
   ultimoDiagnostico = null;
   ultimoCronograma = null;
   toggleExport(false);
+
   showStatus("Gerando diagnóstico...", "info");
   renderMensagem("");
   renderLinhas([]);
@@ -137,17 +149,22 @@ async function executarDiagnostico(event) {
   try {
     const diag = await enviarDiagnostico(payload);
     ultimoDiagnostico = diag;
+
     renderMensagem(diag.mensagem || "Pronto! Aqui está seu plano.");
     renderLinhas(diag.recomendadas || []);
     showStatus("Diagnóstico concluído!", "success");
 
     const plano = await gerarCronograma(payload);
     ultimoCronograma = plano;
+
     renderCronograma(plano.cronograma || []);
     toggleExport(true);
   } catch (err) {
     console.error(err);
-    showStatus(err.message || "Não foi possível gerar o diagnóstico agora.", "error");
+    showStatus(
+      err.message || "Não foi possível gerar o diagnóstico agora.",
+      "error"
+    );
     renderMensagem("");
     renderLinhas([]);
     renderCronograma([]);
@@ -164,8 +181,12 @@ function toggleExport(enable) {
 function main() {
   wireNavigation();
   carregarFamilias();
+
+  // Estado inicial do modo Consultora
   renderConsultoraKit({});
-  renderConsultoraStatus("Selecione um perfil e uma família para começar.");
+  renderConsultoraStatus(
+    "Selecione um perfil e uma família para começar."
+  );
   toggleExport(false);
 
   bindFamiliaCatalogo(familiasCatalogo);
@@ -177,6 +198,7 @@ function main() {
   consultoraForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     renderConsultoraStatus("Montando kit sob medida...", "info");
+
     const perfil = {
       tipoCabelo: consultoraForm.querySelector("[name=tipoCabelo]")?.value,
       condicao: consultoraForm.querySelector("[name=condicao]")?.value,
@@ -187,23 +209,34 @@ function main() {
     const familia = familiasCache.find((f) => f.id === familiaId);
 
     if (!familia) {
-      renderConsultoraStatus("Escolha uma família para gerar o kit.", "error");
+      renderConsultoraStatus(
+        "Escolha uma família para gerar o kit.",
+        "error"
+      );
       renderConsultoraKit({});
       return;
     }
 
     aplicarTema(familia.id);
     const kit = montarKitConsultora(perfil, familia);
-    renderConsultoraStatus("Kit gerado com base no perfil da cliente.", "success");
+    renderConsultoraStatus(
+      "Kit gerado com base no perfil da cliente.",
+      "success"
+    );
     renderConsultoraKit(kit);
   });
 
   refreshFamilias?.addEventListener("click", carregarFamilias);
   formDiag?.addEventListener("submit", executarDiagnostico);
+
   btnExportDiag?.addEventListener("click", () => {
     if (!ultimoDiagnostico) return;
-    exportDiagnosticoPDF({ perfil: ultimoPerfil, diagnostico: ultimoDiagnostico });
+    exportDiagnosticoPDF({
+      perfil: ultimoPerfil,
+      diagnostico: ultimoDiagnostico,
+    });
   });
+
   btnExportCrono?.addEventListener("click", () => {
     if (!ultimoCronograma) return;
     exportCronogramaPDF({
