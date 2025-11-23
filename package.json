@@ -1,6 +1,13 @@
 {
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "body-parser": "^2.2.0",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
   }
 }
