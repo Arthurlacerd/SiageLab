@@ -1,0 +1,47 @@
+{
+  "grades": {
+    "1": {
+      "nome": "Grau 1 — Pouco Danificado",
+      "descricao": "Cabelos sem brilho, com pontas ressecadas e toque áspero, não embaraçam com facilidade.",
+      "cronograma": {
+        "semana1": { "seg": "nutrição", "qua": "hidratação", "sex": "hidratação" },
+        "semana2": { "seg": "hidratação", "qua": "nutrição", "sex": "hidratação" },
+        "semana3": { "seg": "hidratação", "qua": "hidratação", "sex": "reconstrução" },
+        "semana4": { "seg": "hidratação", "qua": "nutrição", "sex": "hidratação" }
+      },
+      "linhas": ["Glow Expert", "Liso Intenso", "Nutri Rose"]
+    },
+
+    "2": {
+      "nome": "Grau 2 — Danificado",
+      "descricao": "Pontas duplas e ressecamento, toque áspero, opacidade, frizz e embaraçam com facilidade.",
+      "cronograma": {
+        "semana1": { "seg": "hidratação", "qua": "nutrição", "sex": "reconstrução" },
+        "semana2": { "seg": "hidratação", "qua": "nutrição", "sex": "reconstrução" },
+        "semana3": { "seg": "hidratação", "qua": "nutrição", "sex": "reconstrução" },
+        "semana4": { "seg": "hidratação", "qua": "nutrição", "sex": "reconstrução" }
+      },
+      "linhas": ["Cauterização dos Fios", "Cauterização dos Lisos"]
+    },
+
+    "3": {
+      "nome": "Grau 3 — Muito Danificado",
+      "descricao": "Fios quebradiços, porosos, elásticos, com frizz, pontas duplas e muito ressecados.",
+      "cronograma": {
+        "semana1": { "seg": "hidratação", "qua": "nutrição", "sex": "reconstrução" },
+        "semana2": { "seg": "hidratação", "qua": "nutrição", "sex": "reconstrução" },
+        "semana3": { "seg": "hidratação", "qua": "nutrição", "sex": "reconstrução" },
+        "semana4": { "seg": "hidratação", "qua": "nutrição", "sex": "reconstrução" }
+      },
+      "linhas": [
+        "Cica Therapy",
+        "Nutri Acid Complex",
+        "Hair Plastia",
+        "Pro Cronology",
+        "Reconstrói os Fios",
+        "Resgate Imediato",
+        "Regeneração Pós Química"
+      ]
+    }
+  }
+}
