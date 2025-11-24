@@ -1,66 +1,55 @@
-const PESO_TIPO = {
-  liso: { brilho: 0.3, controle: 0.4, antifrizz: 0.3 },
-  ondulado: { nutricao: 0.3, antifrizz: 0.4, maciez: 0.2 },
-  cacheado: { nutricao: 0.4, maciez: 0.4, antifrizz: 0.3 },
-  crespo: { nutricao: 0.5, maciez: 0.4, resistencia: 0.3 },
-};
+const fs = require("fs");
+const path = require("path");
+const { selecionarFamiliasPorGrau } = require("./familiaService");
 
-const PESO_CONDICAO = {
-  saudavel: { brilho: 0.3, maciez: 0.3 },
-  ressecado: { nutricao: 0.6, maciez: 0.5 },
-  danificado: { reconstrucao: 0.7, resistencia: 0.6 },
-  oleoso: { brilho: 0.4, controle: 0.5 },
-};
+let cacheRegras = null;
 
-const PESO_OBJETIVO = {
-  brilho: { brilho: 0.8, nutricao: 0.4 },
-  "força": { resistencia: 0.8, reconstrucao: 0.6 },
-  "hidratação": { maciez: 0.8, nutricao: 0.3 },
-  "crescimento": { resistencia: 0.5, nutricao: 0.4 },
-  "equilíbrio": { brilho: 0.3, nutricao: 0.3, maciez: 0.3 },
-};
-
-function calcularScore(fam, tipoCabelo, condicao, objetivo) {
-  const A = fam.atributos || {};
-  let score = 0;
-
-  const pesoTipo = PESO_TIPO[tipoCabelo] || {};
-  Object.entries(pesoTipo).forEach(([chave, peso]) => {
-    score += (A[chave] || 0) * peso;
-  });
-
-  const pesoCond = PESO_CONDICAO[condicao] || {};
-  Object.entries(pesoCond).forEach(([chave, peso]) => {
-    score += (A[chave] || 0) * peso;
-  });
-
-  const pesoObj = PESO_OBJETIVO[objetivo] || {};
-  Object.entries(pesoObj).forEach(([chave, peso]) => {
-    score += (A[chave] || 0) * peso;
-  });
-
-  return score;
+function carregarRegras() {
+  if (cacheRegras) return cacheRegras;
+  const regrasPath = path.join(__dirname, "..", "data", "siage_rules.json");
+  const raw = fs.readFileSync(regrasPath, "utf-8");
+  cacheRegras = JSON.parse(raw);
+  return cacheRegras;
 }
 
-function gerarDiagnostico({ tipoCabelo, condicao, objetivo }, familiasLista) {
-  const recomendadas = familiasLista
-    .map((fam) => ({
-      id: fam.id,
-      nome: fam.nome,
-      classificacao: fam.classificacao,
-      publico_alvo: fam.publico_alvo,
-      atributos: fam.atributos,
-      score: calcularScore(fam, tipoCabelo, condicao, objetivo),
-    }))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 3);
-
-  const primeira = recomendadas[0];
-  const mensagem = primeira
-    ? `Analisando seu tipo de cabelo (${tipoCabelo}), condição (${condicao}) e objetivo (${objetivo}), a linha que mais combina\ncom você é: ${primeira.nome}.`
-    : `Não consegui encontrar uma linha ideal com os dados enviados.`;
-
-  return { mensagem, recomendadas };
+function valorResposta(resposta, escala = {}) {
+  if (typeof resposta === "number" && Number.isFinite(resposta)) return resposta;
+  if (typeof resposta === "boolean") return resposta ? 1 : 0;
+  if (typeof resposta === "string") {
+    const normalizada = resposta.trim().toLowerCase();
+    if (Object.prototype.hasOwnProperty.call(escala, normalizada)) {
+      return escala[normalizada];
+    }
+  }
+  return 0;
 }
 
-module.exports = { gerarDiagnostico };
+function calcularGrau(respostas = {}) {
+  const { weights = {}, thresholds = {}, scaleAnswers = {} } = carregarRegras();
+
+  const score = Object.entries(respostas).reduce((total, [pergunta, resposta]) => {
+    if (!Object.prototype.hasOwnProperty.call(weights, pergunta)) return total;
+    const peso = weights[pergunta];
+    const escala = scaleAnswers[pergunta] || {};
+    const valor = valorResposta(resposta, escala);
+    return total + valor * peso;
+  }, 0);
+
+  if (score >= thresholds.grau3) return 3;
+  if (score >= thresholds.grau2) return 2;
+  return 1;
+}
+
+function gerarDiagnostico(respostas = {}, familiasLista = []) {
+  const grau = calcularGrau(respostas);
+  const recomendadas = selecionarFamiliasPorGrau(grau, familiasLista);
+
+  const principal = recomendadas[0];
+  const mensagem = principal
+    ? `Com base na anamnese (Grau ${grau}), recomendamos começar pela linha ${principal.nome}.`
+    : `Não foi possível encontrar uma linha ideal com as respostas informadas.`;
+
+  return { grau, mensagem, recomendadas };
+}
+
+module.exports = { gerarDiagnostico, calcularGrau, carregarRegras };

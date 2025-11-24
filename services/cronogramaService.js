@@ -1,18 +1,17 @@
 const { gerarDiagnostico } = require("./diagnosticoService");
 
-const CRONOGRAMA_BASE = {
-  saudavel: ["Hidratação", "Nutrição", "Hidratação", "Nutrição"],
-  ressecado: ["Hidratação", "Nutrição", "Hidratação", "Reconstrução"],
-  danificado: ["Reconstrução", "Nutrição", "Hidratação", "Reconstrução"],
-  oleoso: ["Hidratação", "Hidratação", "Nutrição", "Hidratação"],
+const CRONOGRAMA_GRAU = {
+  1: ["Hidratação", "Nutrição", "Hidratação", "Nutrição"],
+  2: ["Hidratação", "Nutrição", "Reconstrução", "Nutrição"],
+  3: ["Reconstrução", "Nutrição", "Hidratação", "Reconstrução"],
 };
 
 const DICAS_OBJETIVO = {
   brilho: "Use protetor térmico e finalize com óleo leve.",
-  "força": "Inclua proteínas e queratina para fortalecer os fios.",
-  "hidratação": "Máscaras hidratantes 2x por semana para recuperar maciez.",
-  "crescimento": "Massagens no couro cabeludo e tônicos estimulantes.",
-  "equilíbrio": "Intercale H/N e evite excessos de reconstrução.",
+  força: "Inclua proteínas e queratina para fortalecer os fios.",
+  hidratação: "Máscaras hidratantes 2x por semana para recuperar maciez.",
+  crescimento: "Massagens no couro cabeludo e tônicos estimulantes.",
+  equilíbrio: "Intercale H/N e evite excessos de reconstrução.",
 };
 
 const DICAS_TRATAMENTO = {
@@ -21,22 +20,22 @@ const DICAS_TRATAMENTO = {
   Reconstrução: "Use queratina de forma moderada para não enrijecer os fios.",
 };
 
-function ajustarSequencia(condicao, objetivo, atributos = {}) {
-  const base = [...(CRONOGRAMA_BASE[condicao] || CRONOGRAMA_BASE.saudavel)];
-  const forcaAlta = (atributos.resistencia || 0) + (atributos.reconstrucao || 0) >= 12;
-  const muitaMaciez = (atributos.maciez || 0) >= 7;
-  const muitaNutricao = (atributos.nutricao || 0) >= 7;
+function ajustarSequencia(grau, objetivo, atributos = {}) {
+  const base = [...(CRONOGRAMA_GRAU[grau] || CRONOGRAMA_GRAU[1])];
+  const focoMaciez = (atributos.maciez || 0) >= 0.7;
+  const focoReconstrucao = (atributos.reconstrucao || 0) >= 0.7;
+  const focoNutricao = (atributos.nutricao || 0) >= 0.7;
 
-  if (objetivo === "força" || forcaAlta) {
+  if (objetivo === "força" || focoReconstrucao) {
     base[0] = "Reconstrução";
     base[3] = "Reconstrução";
   }
 
-  if (objetivo === "hidratação" || muitaMaciez) {
+  if (objetivo === "hidratação" || focoMaciez) {
     base[1] = "Hidratação";
   }
 
-  if (objetivo === "crescimento" || muitaNutricao) {
+  if (objetivo === "crescimento" || focoNutricao) {
     base[2] = "Nutrição";
   }
 
@@ -49,7 +48,7 @@ function ajustarSequencia(condicao, objetivo, atributos = {}) {
 }
 
 function montarCronogramaDetalhado(sequencia, objetivo, familiaPrincipal) {
-  const foco = DICAS_OBJETIVO[objetivo] || DICAS_OBJETIVO["equilíbrio"];
+  const foco = DICAS_OBJETIVO[objetivo] || DICAS_OBJETIVO.equilíbrio;
 
   return sequencia.map((tratamento, idx) => ({
     semana: idx + 1,
@@ -61,16 +60,16 @@ function montarCronogramaDetalhado(sequencia, objetivo, familiaPrincipal) {
   }));
 }
 
-function gerarCronogramaDiagnostico({ tipoCabelo, condicao, objetivo }, familiasLista) {
-  const diagnostico = gerarDiagnostico({ tipoCabelo, condicao, objetivo }, familiasLista);
+function gerarCronogramaDiagnostico(respostas, familiasLista) {
+  const diagnostico = gerarDiagnostico(respostas, familiasLista);
   const principal = diagnostico.recomendadas?.[0];
   const atributos = principal?.atributos || {};
-  const sequencia = ajustarSequencia(condicao, objetivo, atributos);
+  const sequencia = ajustarSequencia(diagnostico.grau, respostas?.objetivo, atributos);
 
   return {
     mensagem: diagnostico.mensagem,
     recomendadas: diagnostico.recomendadas,
-    cronograma: montarCronogramaDetalhado(sequencia, objetivo, principal),
+    cronograma: montarCronogramaDetalhado(sequencia, respostas?.objetivo, principal),
   };
 }
 
