@@ -1,0 +1,26 @@
+{
+  "weights": {
+    "queda": 3,
+    "afinamento": 2,
+    "quebra": 2,
+    "quimica_recente": 2,
+    "sensibilidade_couro": 2,
+    "ressecado": 1,
+    "oleoso": 1,
+    "pontas_duplas": 1,
+    "frizz": 1
+  },
+  "scaleAnswers": {
+    "queda": { "leve": 1, "moderada": 2, "intensa": 3 },
+    "afinamento": { "leve": 1, "moderado": 2, "grave": 3 },
+    "quebra": { "ocasional": 1, "frequente": 2, "constante": 3 },
+    "ressecado": { "leve": 1, "moderado": 2, "intenso": 3 },
+    "oleoso": { "leve": 1, "moderado": 2, "intenso": 3 },
+    "pontas_duplas": { "poucas": 1, "algumas": 2, "muitas": 3 },
+    "frizz": { "leve": 1, "moderado": 2, "intenso": 3 }
+  },
+  "thresholds": {
+    "grau3": 9,
+    "grau2": 4
+  }
+}
