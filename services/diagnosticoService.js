@@ -1,16 +1,5 @@
-const fs = require("fs");
-const path = require("path");
 const { selecionarFamiliasPorGrau } = require("./familiaService");
-
-let cacheRegras = null;
-
-function carregarRegras() {
-  if (cacheRegras) return cacheRegras;
-  const regrasPath = path.join(__dirname, "..", "data", "siage_rules.json");
-  const raw = fs.readFileSync(regrasPath, "utf-8");
-  cacheRegras = JSON.parse(raw);
-  return cacheRegras;
-}
+const { carregarRegras } = require("./ruleService");
 
 function valorResposta(resposta, escala = {}) {
   if (typeof resposta === "number" && Number.isFinite(resposta)) return resposta;

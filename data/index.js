@@ -46,7 +46,11 @@ function loadFamilias() {
   const dir = __dirname;
   const entries = fs
     .readdirSync(dir)
-    .filter((file) => file.endsWith(".json"));
+    .filter(
+      (file) =>
+        file.endsWith(".json") &&
+        !["siage_rules.json", "rules.json"].includes(file)
+    );
 
   const familias = {};
 
